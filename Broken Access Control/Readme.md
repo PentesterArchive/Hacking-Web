@@ -16,7 +16,5 @@ In some cases, the administrative URL might be disclosed in other locations, suc
 
 ## Unprotected admin functionality with unpredictable URL
 In some cases, sensitive functionality are located at an unpredictable location by giving it a less predictable URL. This is an example of so-called "security by obscurity". However, hiding sensitive functionality does not provide effective access control because users might discover the obfuscated URL in a number of ways. For example we can find links to the admin-panel in the JavaScript of the webpage.
-![1](https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/961daed4-1d15-4a25-b067-0b1ed105f07e)
-
-<img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/961daed4-1d15-4a25-b067-0b1ed105f07e" width=50% height=50%>
+<img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/961daed4-1d15-4a25-b067-0b1ed105f07e" width=60% height=60%>
 
