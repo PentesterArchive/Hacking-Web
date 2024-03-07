@@ -12,6 +12,8 @@ This application implements no defenses against path traversal attacks. As a res
 On Windows, both ../ and ..\ are valid directory traversal sequences. The following is an example of an equivalent attack against a Windows-based server:
 `https://insecure-website.com/loadImage?filename=..\..\..\windows\win.ini`
 
+----------------------------------------------------
+
 # Path traversal Types and Serialization.
 ## Absolut Path traversal.
 In this type of Path traversal, results can be obtained by using the absolute path:<br />
