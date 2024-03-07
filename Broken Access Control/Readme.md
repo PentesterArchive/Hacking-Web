@@ -6,6 +6,6 @@ We can distinguish some of its parts as follows:
 - ***Access control*** determines whether the user is allowed to carry out the action that they are attempting to perform.
 
 ## Accessing to unprotected functionalities:
-The idea is to gain access to ***unprotected functionalities*** that we are not permited to access and perform a vertical privilege escalation.<br />
-We can try to exploit this vulnerability using Brute Force attacks to Discover sensitive directories like `administrator-panel`, with some luck we can access and run administrator functinalities without any credentials.<br />
-In some cases, the administrative URL might be disclosed in other locations, such as the `robots.txt` file
+The idea is to gain access to ***unprotected functionalities*** that we are not permitted to access and perform a vertical privilege escalation.<br />
+We can try to exploit this vulnerability using Brute Force attacks to discover sensitive directories like `administrator-panel`, with some luck, we can access and run administrator functionalities without any credentials.<br />
+In some cases, the administrative URL might be disclosed in other locations, such as the `robots.txt` file.
