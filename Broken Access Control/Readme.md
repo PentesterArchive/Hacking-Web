@@ -27,8 +27,10 @@ Some applications determine the user's access rights or role at login, and then 
 - Preset query string parameter. <br />
 <br />
 The application makes access control decisions based on the submitted value. For example:<br />
-`https://insecure-website.com/login/home.jsp?admin=true` <br />
-`https://insecure-website.com/login/home.jsp?role=1` <br />
+```http
+https://insecure-website.com/login/home.jsp?admin=true 
+https://insecure-website.com/login/home.jsp?role=1
+```
 This approach is insecure because a user can modify the value and access functionality they're not authorized to, such as administrative functions.
 
 ### Cookie 
