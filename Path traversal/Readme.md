@@ -30,6 +30,7 @@ In some cases, serialization techniques detect the path `../` and delete it. We 
 In other cases the server may have a black list that find some maches and invalidate them like `passwd`. We can bypass it using regular expresions `pass*`: <br />
 `https://insecure-website.com/loadImage?filename=....//....//....//....//etc/pass*`
 
+## Null byte Path Traversal
 
 
 
