@@ -37,7 +37,7 @@ This approach is insecure because a user can modify the value and access functio
 
 
 
-<img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/9672f343-784d-4e0d-84c3-a6388227a665" width="10" height="280">
+<img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/9672f343-784d-4e0d-84c3-a6388227a665" width="200" height="100">
 <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/58438b0a-23a3-4b7f-a5e4-225e557e197c" width=80% height=40%>
 
 
