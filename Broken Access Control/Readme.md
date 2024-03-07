@@ -30,8 +30,12 @@ The application makes access control decisions based on the submitted value. For
 `https://insecure-website.com/login/home.jsp?role=1`
 This approach is insecure because a user can modify the value and access functionality they're not authorized to, such as administrative functions.
 ### Cookie 
-![2](https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/9672f343-784d-4e0d-84c3-a6388227a665)
-![3](https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/58438b0a-23a3-4b7f-a5e4-225e557e197c)
+
+<img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/9672f343-784d-4e0d-84c3-a6388227a665" width=60% height=60%>
+
+
+<img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/58438b0a-23a3-4b7f-a5e4-225e557e197c" width=60% height=60%>
+
 
 
 
