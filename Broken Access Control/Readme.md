@@ -5,7 +5,16 @@ We can distinguish some of its parts as follows:
 - ***Session management*** identifies which subsequent HTTP requests are being made by that same user.
 - ***Access control*** determines whether the user is allowed to carry out the action that they are attempting to perform.
 
+-------------
+
 ## Accessing to unprotected functionalities:
 The idea is to gain access to ***unprotected functionalities*** that we are not permitted to access and perform a vertical privilege escalation.<br />
 We can try to exploit this vulnerability using Brute Force attacks to discover sensitive directories like `administrator-panel`, with some luck, we can access and run administrator functionalities without any credentials.<br />
 In some cases, the administrative URL might be disclosed in other locations, such as the `robots.txt` file.
+
+------------------------
+
+## Unprotected admin functionality with unpredictable URL
+In some cases, sensitive functionality are located at an unpredictable location by giving it a less predictable URL. This is an example of so-called "security by obscurity". However, hiding sensitive functionality does not provide effective access control because users might discover the obfuscated URL in a number of ways. For example we can find links to the admin-panel in the JavaScript of the webpage.
+![1](https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/961daed4-1d15-4a25-b067-0b1ed105f07e)
+
