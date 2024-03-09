@@ -26,11 +26,12 @@ stockApi=http://localhost/admin
 ## Gaining administrative functionality
 The server fetches the contents of the /admin URL and returns it to the user.
 
-***An attacker can visit the /admin URL, but the administrative functionality is normally only accessible to authenticated users. This means an attacker won't see anything of interest. However, if the request to the /admin URL comes from the local machine, the normal access controls are bypassed. The application grants full access to the administrative functionality, because the request appears to originate from a trusted location.***
+***An attacker can visit the /admin URL, but the administrative functionality is normally only accessible to authenticated users. This means an attacker won't see anything of interest. However, if the request to the /admin URL comes from the local machine, the normal access controls are bypassed. The application grants full access to the administrative functionality, because the request appears to originate from a trusted location.*** <br />
+
 <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/8241cb7d-6d2d-4a76-a78d-a1b278ea23e1" width=900 height=150>
 
 
-![5](https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/8241cb7d-6d2d-4a76-a78d-a1b278ea23e1)
+![5](https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/8241cb7d-6d2d-4a76-a78d-a1b278ea23e1|50)
 
 <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/58db7c45-9f09-4d6a-8846-bdc0f8d033f7" width=900 height=150>
 
