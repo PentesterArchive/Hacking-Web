@@ -28,6 +28,15 @@ The server fetches the contents of the /admin URL and returns it to the user.
 
 ***An attacker can visit the /admin URL, but the administrative functionality is normally only accessible to authenticated users. This means an attacker won't see anything of interest. However, if the request to the /admin URL comes from the local machine, the normal access controls are bypassed. The application grants full access to the administrative functionality, because the request appears to originate from a trusted location.*** <br />
 
+![5](https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/43d1ea7d-620d-47c1-9b6d-33d7b1c8521e)
+<img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/43d1ea7d-620d-47c1-9b6d-33d7b1c8521e" width="1200">
+
+![6](https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/e86000e7-52ea-48d0-841e-708d970dea4a)
+<img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/e86000e7-52ea-48d0-841e-708d970dea4a" width="500">
+
+![7](https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/734968a3-c619-4cd5-9f50-9711f315f64f)
+<img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/734968a3-c619-4cd5-9f50-9711f315f64f" width="600">
+
 
 
 
