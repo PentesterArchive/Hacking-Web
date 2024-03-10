@@ -1,5 +1,5 @@
 # Server-side request forgery SSRF!
-Server-side request forgery is a web security ***vulnerability that allows an attacker to cause the server-side application to make requests to an unintended location***.
+Server-side request forgery is a web security ***vulnerability that allows an attacker to cause the server-side application to make requests to an unintended location***.<br />
 In a typical SSRF attack, ***the attacker might cause the server to make a connection to internal-only services*** within the organization's infrastructure. In other cases, they may be able to force the server to connect to arbitrary external systems. This could leak sensitive data, such as authorization credentials.
 
 ## How does it work?
@@ -21,7 +21,7 @@ This causes the server to make a request to the specified URL (`stockApi`), retr
 In this example, an attacker can modify the request to specify a URL local to the server:
 
 
-***An attacker can visit the /admin URL, but the administrative functionality is normally only accessible to authenticated users. This means an attacker won't see anything of interest. However, if the request to the /admin URL comes from the local machine, the normal access controls are bypassed. The application grants full access to the administrative functionality, because the request appears to originate from a trusted location.*** <br />
+> ***An attacker can visit the /admin URL, but the administrative functionality is normally only accessible to authenticated users. This means an attacker won't see anything of interest. However, if the request to the /admin URL comes from the local machine, the normal access controls are bypassed. The application grants full access to the administrative functionality, because the request appears to originate from a trusted location.*** <br />
 
 - Visiting /admin URL:
 <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/43d1ea7d-620d-47c1-9b6d-33d7b1c8521e" width="1200">
@@ -40,7 +40,7 @@ In this cases we can try to brute force the target IP on the vulnerable SSRF Url
 - Brute forcing target IP to find back-end systems:
 <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/37975764-78c7-4534-89c4-89eb38d036e7" width="500">
 <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/0b98d493-887f-40a6-884f-52867b4e6e17" width="500"><br />
-- Visiting /admin URL:
+- Visiting /admin URL:<br />
 `<VulnerableSSRFUrl>=http://<NewIP>:<Port>/<adminPanel>`
 
 
@@ -55,10 +55,10 @@ In this cases we can try to brute force the target IP on the vulnerable SSRF Url
 In some cases we can see that the word localhost is blacklisted. We have different ways to refer `localhost`:
 - `127.0.0.1`
 - `127.1`
-- `0`
-  .
-  .
-  .
+- `0`<br />
+  .<br />
+  .<br />
+  .<br />
 
 
 
