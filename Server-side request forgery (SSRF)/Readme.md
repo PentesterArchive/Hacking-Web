@@ -45,12 +45,7 @@ In this cases we can try to brute force the target IP on the vulnerable SSRF Url
 `<VulnerableSSRFUrl>=http://<NewIP>:<Port>/<adminPanel>`
 
 
-
-
-
-
-
-
+----------------------------
 
 
 ## SSRF Serialization Bypass
