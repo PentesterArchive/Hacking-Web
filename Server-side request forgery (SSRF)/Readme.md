@@ -41,7 +41,9 @@ In this cases we can try to brute force the target IP on the vulnerable SSRF Url
 <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/37975764-78c7-4534-89c4-89eb38d036e7" width="500">
 <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/0b98d493-887f-40a6-884f-52867b4e6e17" width="500"><br />
 - Visiting /admin URL:<br />
-`<VulnerableSSRFUrl>=http://<NewIP>:<Port>/<adminPanel>`
+```
+<VulnerableSSRFUrl>=http://<NewIP>:<Port>/<adminPanel>
+```
 
 
 
