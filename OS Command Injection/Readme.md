@@ -12,5 +12,9 @@ If we go to or own system we can try to execute a script and see what happen if 
 <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/fb13d86d-c6f4-4d1f-94b6-f7766d32088c" width="600">
 
 ## Executing a basic OS Command Injection.
+In a basic OS Command Injection we need to find an action being performed by the web and try to run our commands using the operators used in the previous examples.<br />
+In the next case the target is executing `checkstock.sh` to check the stock. We can try to make the command injection there:
+
+
 
 
