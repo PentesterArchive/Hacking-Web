@@ -9,12 +9,12 @@ If we go to or own system we can try to execute a script and see what happen if 
 <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/1aa04a50-857a-44e2-887c-54d1f98489f1">
 <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/94da0f7b-d3fb-4310-933b-797d0c1bc0c2" width="300"><br />
 ***We can use those methods to obtain all the system info that we need or even to get a reverse shell:***
-<img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/fb13d86d-c6f4-4d1f-94b6-f7766d32088c" width="600">
+<img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/fb13d86d-c6f4-4d1f-94b6-f7766d32088c" width="500">
 
 ## Executing a basic OS Command Injection.
 In a basic OS Command Injection we need to find an action being performed by the web and try to run our commands using the operators used in the previous examples.<br />
 In the next case the target is executing `checkstock.sh` to check the stock. We can try to make the command injection there:<br />
-<img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/5d66821f-de95-4ab8-8ce5-4ef80b07956d" width="600"><br />
+<img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/5d66821f-de95-4ab8-8ce5-4ef80b07956d" width="800"><br />
 
 ## Bind OS Command Injection.
 In a Bind OS Command Injection the server executes our commands but we can not see the output as we did in the previous case. However, we can execute commands that we know take some time to finish, as for example we can execute a `ping -c X localhost`, of course if the web page take some time its because the command is being executed and we can try to obtain a reverse shell.<br />
