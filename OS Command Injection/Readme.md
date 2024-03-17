@@ -18,7 +18,12 @@ In the next case the target is executing `checkstock.sh` to check the stock. We 
 
 ## Bind OS Command Injection.
 In a Bind OS Command Injection the server executes our commands but we can not see the output as we did in the previous case. However, we can execute commands that we know take some time to finish, as for example we can execute a `ping -c X localhost`, of course if the web page take some time its because the command is being executed and we can try to obtain a reverse shell.<br />
-<img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/17caada8-493e-4f56-b9d7-718eb47255cb" width="600"><br />
-![7](https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/de258830-5ef9-484d-9081-27f3efb4dd27)
+<img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/de258830-5ef9-484d-9081-27f3efb4dd27" width="700"><br />
+I used the operator `||` 'OR' because the script that the web was executing is not running properly due to our command injection. The vulnerable parameter is "email," and the rest of the parameters cannot be sent as intended.
+
+
+
+
+
 
 
