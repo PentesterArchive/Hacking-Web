@@ -21,4 +21,3 @@ In a Bind OS Command Injection the server executes our commands but we can not s
 <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/17caada8-493e-4f56-b9d7-718eb47255cb" width="600"><br />
 
 
-|ping -c 10 localhost;
