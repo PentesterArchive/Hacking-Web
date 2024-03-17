@@ -13,8 +13,12 @@ If we go to or own system we can try to execute a script and see what happen if 
 
 ## Executing a basic OS Command Injection.
 In a basic OS Command Injection we need to find an action being performed by the web and try to run our commands using the operators used in the previous examples.<br />
-In the next case the target is executing `checkstock.sh` to check the stock. We can try to make the command injection there:
+In the next case the target is executing `checkstock.sh` to check the stock. We can try to make the command injection there:<br />
+<img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/5d66821f-de95-4ab8-8ce5-4ef80b07956d" width="600"><br />
+
+## Bind OS Command Injection.
+In a Bind OS Command Injection the server executes our commands but we can not see the output as we did in the previous case. However, we can execute commands that we know take some time to finish, as for example we can execute a `ping -c X localhost`, of course if the web page take some time its because the command is being executed and we can try to obtain a reverse shell.<br />
+<img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/17caada8-493e-4f56-b9d7-718eb47255cb" width="600"><br />
 
 
-
-
+|ping -c 10 localhost;
