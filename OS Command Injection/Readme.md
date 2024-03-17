@@ -24,14 +24,14 @@ In a Bind OS Command Injection the server executes our commands but we can not s
 I used the operator `||` 'OR' because the script that the web was executing is not running properly due to our command injection. The vulnerable parameter is "email," and the rest of the parameters cannot be sent as intended.
 
 ### Redirecting a Bind OS Command Injection:
-If we are against a Bind OS Command Injection we can try to create a .txt redirecting our commands output. If we do this its essential that we can find a way to show those files. In the next example we have the directory /var/www/images, which contains the web images and its writable, so if we open an image from the web site we can see this:<br />
+If we are against a Bind OS Command Injection we can try to create a .txt redirecting the command output. If we do this its essential that we can find a way to show those files. In the next example we have the directory /var/www/images, which contains the web images and its writable, so if we open an image from the web site we can see this:<br />
 <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/b08da3e6-7853-4fcc-aead-c6b2c71f5590" width="700"><br />
 Now we can try to make the file with our output and finally see it:<br />
 
 <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/777518e1-3d2e-4cbe-881c-7b19295e8d16" width="600">
 
 <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/4e332df8-c71e-44e9-ab4d-9c3d06658fcc" width="600"><br />
-After we get some info as the username we can attempt to for example get the `id_rsa` with the next command: `cat /home/<username>/.ssh/id_rsa > /var/www/images/id_rsa.txt`. If the command is succesful we can now acces the target via ssh.
+Once we have obtained the username we can attempt, for example, to retrieve the `id_rsa`. with the command `cat /home/<username>/.ssh/id_rsa > /var/www/images/id_rsa.txt`. If the command was successful we can now access the target system via ssh.
 
 
 
