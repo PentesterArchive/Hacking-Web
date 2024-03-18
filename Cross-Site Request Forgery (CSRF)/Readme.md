@@ -33,7 +33,6 @@ document.forms[0].submit();
 
 ## Basic CSRF via GET method EXPLOITATION:
 - First, we capture the POST method of the parameter we want to change to our target. We have to **change the request methods** as follows:<br />
-![4](https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/fff805bc-400f-4bd0-a4a0-bc8975de4e4c)
 
 
 
