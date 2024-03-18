@@ -23,9 +23,9 @@ document.forms[0].submit();
 
 ### Basic CSRF via POST method EXPLOITATION:
 - First we obtain the POST method:
-<img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/54d619ca-980e-43c2-aa79-b6cd7fd7047c" width="600">
+<img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/54d619ca-980e-43c2-aa79-b6cd7fd7047c" width="600"><br />
 - Finally we create the CSRF PoC so we can deliver it to our victim:
-<img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/41cfc524-504d-4f8c-8130-fc019b00d52e" width="700">
+<img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/41cfc524-504d-4f8c-8130-fc019b00d52e" width="700"><br />
 
 
 
