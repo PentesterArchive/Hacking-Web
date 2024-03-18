@@ -5,8 +5,8 @@ We can deliver a CSRF attack via GET or POST method depending on the case.
 
 ## Basic CSRF via POST method.
 ### Basic CSRF via POST method EXPLANATION:
-We can perform a CSRF via POST method. We have to do the action we want to exploit in our own account ant capture the POST. Once we have it we have to make an html form to deliver it. 
-We can use an authomated resources as [CSRF PoC-Generator](https://hacktify.in/hacktify-csrf-poc-generator/), or the following script modifiying it to our own situation:
+We can perform a CSRF via POST method. We have to do the action we want to exploit in our own account and capture the POST. Once we have it we have to make an html form to deliver it. 
+We can use an automated resources as [CSRF PoC-Generator](https://hacktify.in/hacktify-csrf-poc-generator/), or the following script modifying it to our own situation:
 ```html
 <html>
 <body>
