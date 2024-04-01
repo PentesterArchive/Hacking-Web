@@ -49,7 +49,7 @@ We can bypass this type of restriction in outdated PHP versions by using `./`.<b
 The target server can interprete the php language, thats why if we try to deploy a `.php` file we can not see it. In this type of scenarios we need to use php Wrappers. <br />
 
 ### Base64-encode Wrapper:
-To see the php files we can deploy them in base64 using the next wrapper: 
+To see the php files we can deploy them in base64 using the next wrapper: <br />
 `php://filter/convert.base64-encode/resource=<FILE>`
 - First all we have to be sure if the server is concatenating the extension or not:
 
@@ -58,7 +58,7 @@ To see the php files we can deploy them in base64 using the next wrapper:
 <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/f17c99dc-36a3-4a19-88bb-10f9b3d5b93b" width="400">
 
 
-- We use the wrapper. 
+- We use the wrapper (We dont use .php to search for the file because we saw that the web is adding the extension by it self). 
 <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/c42f2d73-e3f7-4911-bfc8-c1c41b68b14c" width="600">
 
 
