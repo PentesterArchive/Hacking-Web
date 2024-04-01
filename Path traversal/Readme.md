@@ -38,6 +38,8 @@ Sometimes the developer may concatenate an exension to the file being searched. 
 `https://insecure-website.com/loadImage?filename=../../../../../etc/passwd%00`<br />
 
 ## Extension validation.
-Its possible to make the server just to search the files that contains an especific exetensin. For example, The target can only show a file if the file extension is not .txt.
-
+It's possible to configure the server to search only for the files with a especific exetension. For example, the target may only display a file if its extension is not `.txt`. <br />
+We can bypass this type of restriction in outdated PHP versions by using `./`.<br />
+![2](https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/158c34c8-3339-4974-9a9d-f931b0e55527)
+![3](https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/0e7bc4b8-790b-4372-9e17-62dd812909de)
 
