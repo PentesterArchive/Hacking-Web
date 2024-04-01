@@ -46,13 +46,12 @@ We can bypass this type of restriction in outdated PHP versions by using `./`.<b
 ----------------------------------------------------------------------------------------------------------------------------------
 
 ## Wrappers.
-The target server can interprete the php language, thats why if we try to deploy a `.php` file we can not see it. In this type of scenarios we need to use php Wrappers. <br />
+The target server can interpret the PHP language. That's why, if we try to deploy a `.php` file, we can not see it. In these scenarios, we need to use PHP wrappers. <br />
 
 ### Base64-encode Wrapper:
-To see the php files we can deploy them in base64 using the next wrapper: <br />
+To view PHP files, we can deploy them in base64 using the following wrapper: <br />
 `php://filter/convert.base64-encode/resource=<FILE>`
-- First all we have to be sure if the server is concatenating the extension or not:
-
+- First, we have to make sure if the server is concatenating the extension or not:
 <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/0ada0fd0-bcf6-4ad0-b4d6-dc8ec0153e40" width="700">
 <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/4d845f2b-9acc-482e-8d7d-b48b7ae97b8d" width="500">
 <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/f17c99dc-36a3-4a19-88bb-10f9b3d5b93b" width="400">
