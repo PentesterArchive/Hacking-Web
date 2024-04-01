@@ -38,8 +38,42 @@ Sometimes the developer may concatenate an exension to the file being searched. 
 `https://insecure-website.com/loadImage?filename=../../../../../etc/passwd%00`<br />
 
 ## Extension validation.
-It's possible to configure the server to search only for the files with a especific exetension. For example, the target may only display a file if its extension is not `.txt`. <br /><br />
+It's possible to configure the server to search only for the files with a especific exetension. For example, the target may only display a file if its extension is not `.txt`. <br />
 We can bypass this type of restriction in outdated PHP versions by using `./`.<br />
-![2](https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/158c34c8-3339-4974-9a9d-f931b0e55527)
+![2](https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/158c34c8-3339-4974-9a9d-f931b0e55527)<br />
 ![3](https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/0e7bc4b8-790b-4372-9e17-62dd812909de)
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+## Wrappers.
+The target server can interprete the php language, thats why if we try to deploy a `.php` file we can not see it. In this type of scenarios we need to use php Wrappers. <br />
+
+### Base64-encode Wrapper:
+To see the php files we can deploy them in base64 using the next wrapper: 
+`php://filter/convert.base64-encode/resource=<FILE>`
+- First all we have to be sure if the server is concatenating the extension or not:
+
+<img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/0ada0fd0-bcf6-4ad0-b4d6-dc8ec0153e40" width="700">
+<img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/4d845f2b-9acc-482e-8d7d-b48b7ae97b8d" width="500">
+<img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/f17c99dc-36a3-4a19-88bb-10f9b3d5b93b" width="400">
+
+
+- We use the wrapper. 
+<img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/c42f2d73-e3f7-4911-bfc8-c1c41b68b14c" width="600">
+
+
+- The last step is to decode the base64 output. 
+
+
+
+
+
+
+
+
+
+
+
+
+
 
