@@ -1,4 +1,4 @@
-# Path traversal.
+# Local File Inclusion/Directory Path traversal.
 Path traversal is also known as directory traversal. These vulnerabilities ***enable an attacker to read arbitrary files on the server that is running an application***. <br />
 In some cases, an attacker might be able to write to arbitrary files on the server, allowing them to modify application data or behavior, and ultimately take full control of the server. 
 
@@ -63,6 +63,10 @@ To view PHP files, we can deploy them in base64 using the following wrapper: <br
 
 - The last step is to decode the base64 output. 
 
+-------------------------
+
+# From LFI to RCE
+[Log Poisoning](https://github.com/alejandro-pentest/Hacking-Web/blob/main/Path%20traversal/LFI%20-%3E%20RCE/Log%20Poisoning.md) 
 
 
 
