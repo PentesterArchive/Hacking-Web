@@ -66,7 +66,7 @@ To view PHP files, we can deploy them in base64 using the following wrapper: <br
 -------------------------
 
 # From LFI to RCE
-[Log Poisoning](https://github.com/alejandro-pentest/Hacking-Web/blob/main/Path%20traversal/LFI%20-%3E%20RCE/Log%20Poisoning.md) 
+1. [Log Poisoning](https://github.com/alejandro-pentest/Hacking-Web/blob/main/Path%20traversal/LFI%20-%3E%20RCE/Log%20Poisoning.md) 
 
 
 
