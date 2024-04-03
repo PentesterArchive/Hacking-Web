@@ -43,7 +43,7 @@ We can bypass this type of restriction in outdated PHP versions by using `./`.<b
 
 ----------------------------------------------------------------------------------------------------------------------------------
 
-## Wrappers.
+## Reading PHP files using Wrappers.
 The target server can interpret the PHP language. That's why, if we try to deploy a `.php` file, we can not see it. In these scenarios, we need to use PHP wrappers. <br />
 
 ### Base64-encode Wrapper:
@@ -59,12 +59,22 @@ To view PHP files, we can deploy them in base64 using the following wrapper: <br
 <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/c42f2d73-e3f7-4911-bfc8-c1c41b68b14c" width="700">
 
 
-- The last step is to decode the base64 output. 
+- The last step is to decode the base64 output.
+
+
+
+
+### convert.iconv
+We can also read PHP files with the next line.
+`php://filter/convert.iconv.utf-8.utf-16/resource=<Filename>`
+![10](https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/2be76dad-fccf-405f-99f8-0f6dd002e8f8)
+
 
 -------------------------
 
 # From LFI to RCE
-1. [Log Poisoning](https://github.com/alejandro-pentest/Hacking-Web/blob/main/Local%20File%20Inclusion-Path%20traversal/LFI%20-%3E%20RCE/Log%20Poisoning.md) 
+1. [Comand Execution using Wrappers.](https://github.com/alejandro-pentest/Hacking-Web/blob/main/Local%20File%20Inclusion-Path%20traversal/LFI%20-%3E%20RCE/Wrappers.md)
+2. [Log Poisoning.](https://github.com/alejandro-pentest/Hacking-Web/blob/main/Local%20File%20Inclusion-Path%20traversal/LFI%20-%3E%20RCE/Log%20Poisoning.md) 
 
 
 
