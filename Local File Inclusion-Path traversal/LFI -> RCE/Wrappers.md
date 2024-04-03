@@ -17,3 +17,7 @@
 <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/41099e8f-01c0-43c0-83b1-7f422a8d4580" width="300">
 
 ![14](https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/9299cecc-3ce8-415b-8580-af767f54be04)
+
+### Example 2:
+![16](https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/f5300def-5c56-4065-9182-8ac3c251f5be)
+
