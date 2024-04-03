@@ -6,7 +6,8 @@ We have to change the method request to POST.<br />
 
 ![Wrapper3](https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/dedf5a5c-a25a-4ba8-89d6-7061ccb9a264)
 
-
+-------------------------------------------------------
+--------------------------------------------------------
 
 # data://text/plain;base64,
 In this example we use `<?php system("whoami"); ?>` in Base64. Sometimes we will need to URL encode it.<br />
