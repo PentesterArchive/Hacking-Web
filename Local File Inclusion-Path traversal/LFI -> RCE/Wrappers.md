@@ -1,8 +1,6 @@
 # php://input
 We have to change the method request to POST.<br />
 <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/5f3d5024-5d4a-4081-bdb3-a49adf45dea9" width="450">
-
-
 <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/2f535f36-3959-4767-b354-d69f19068336" width="500">
 
 
