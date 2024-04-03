@@ -11,7 +11,7 @@
 
 
 # data://text/plain;base64,
-`data://text/plain;base64,<BASE64>`.
+`data://text/plain;base64,<BASE64>`.<br />
 <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/dae0bea9-c892-4dcf-b25c-063d2bce36d9" width="450">
 <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/41099e8f-01c0-43c0-83b1-7f422a8d4580" width="300">
 
