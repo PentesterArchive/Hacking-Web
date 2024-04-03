@@ -1,5 +1,5 @@
 # php://input
-We have to change the method request to POST.
+We have to change the method request to POST.<br />
 <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/5f3d5024-5d4a-4081-bdb3-a49adf45dea9" width="450">
 
 
