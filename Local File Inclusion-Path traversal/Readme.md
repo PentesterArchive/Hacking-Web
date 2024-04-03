@@ -74,8 +74,8 @@ We can also read PHP files with the next line.
 
 # From LFI to RCE
 1. [Comand Execution using Wrappers.](https://github.com/alejandro-pentest/Hacking-Web/blob/main/Local%20File%20Inclusion-Path%20traversal/LFI%20-%3E%20RCE/Wrappers.md)
-2. [Log Poisoning.](https://github.com/alejandro-pentest/Hacking-Web/blob/main/Local%20File%20Inclusion-Path%20traversal/LFI%20-%3E%20RCE/Log%20Poisoning.md) 
-
+2. [Log Poisoning.](https://github.com/alejandro-pentest/Hacking-Web/blob/main/Local%20File%20Inclusion-Path%20traversal/LFI%20-%3E%20RCE/Log%20Poisoning.md)
+3. [Filter Chain](https://github.com/alejandro-pentest/Hacking-Web/blob/main/Local%20File%20Inclusion-Path%20traversal/LFI%20-%3E%20RCE/PHP%20Filter%20Chain.md)
 
 
 
