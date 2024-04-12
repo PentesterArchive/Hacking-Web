@@ -20,8 +20,12 @@ ${7*7}
 #{7*7}
 <%= 7*7 %>
 ```
-- ***If the expressions are interpreted we can proceed to do a [Plaintext Context SSTI exploitation.](https://github.com/alejandro-pentest/Hacking-Web/blob/main/Server%20Side%20Template%20Injection%20(SSTI)/Server%20Side%20Template%20Injection%20(SSTI).md)***<br />
+
 - ***Depending on the interpreted expression, the payload we'll use must be in one language or another.***
+- ***If the expressions are interpreted we can proceed to do a [Plaintext Context SSTI exploitation.](https://github.com/alejandro-pentest/Hacking-Web/blob/main/Server%20Side%20Template%20Injection%20(SSTI)/Server%20Side%20Template%20Injection%20(SSTI).md)***<br />
+<img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/86a348ed-e521-412d-8e41-3a0b3877dce6" width="600"><br />
+
+
 
 
 
