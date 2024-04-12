@@ -1,6 +1,6 @@
 # Server Side Template Injection (SSTI)
 ## Detection.
-```java
+```javascript
 {{7*7}}
 ${{7*7}}
 ${7*7}
