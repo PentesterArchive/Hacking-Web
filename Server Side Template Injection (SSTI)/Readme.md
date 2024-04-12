@@ -6,10 +6,8 @@ directives in order to manipulate the template engine, often enabling them to ta
  
 ## SSTI types
 We can distinguis two Server Side Template Injections:
-  - [Plaintext Context SSTI][Plaintext Context SSTI.].
-  - [Code Context SSTI](Code Context SSTI.)
-  - 
-### Plaintext Context SSTI.
+
+### 1-Plaintext Context SSTI.
 #### Detection
 First of all we have to see if we can manage the output:<br />
 <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/ea03795b-356a-47f6-83a4-0b103c923d63" width="600"><br /><br />
@@ -26,7 +24,7 @@ ${7*7}
 
 
 
-### Code Context SSTI.
+### 2-Code Context SSTI.
 
 
 
