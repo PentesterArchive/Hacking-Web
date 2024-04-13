@@ -34,6 +34,7 @@ In a Code Context SSTI we have to deploy our payload in the code.
 
 -----------------------------------------------
 
+## Exploitation
 - Correcting the mistake closing the function `user.name}`+ payload:
 ![7](https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/567be3ab-f56c-4815-bd55-91dc874f67f3)
 ![8](https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/adea82ab-c95a-4b2f-b8ee-ed81b846b6b3)
