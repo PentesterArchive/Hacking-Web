@@ -40,8 +40,7 @@ In a Code Context SSTI we have to deploy our payload in the code.
 ![8](https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/adea82ab-c95a-4b2f-b8ee-ed81b846b6b3)
 
 - Finally we can check some resources as [hacktricks-SSTI](https://book.hacktricks.xyz/pentesting-web/ssti-server-side-template-injection#detection) or [tornado SSTI](https://ajinabraham.com/blog/server-side-template-injection-in-tornado), where we can obtain the next succesful payload for tornado template: `{% import os %}{{ os.popen("whoami").read() }}`.
-![9](https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/e4009d82-66aa-42f3-b35f-8048e0cb8437)
-<img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/cefbf409-a669-416e-a215-8d2aef4f37e8" width="600">
+![9](https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/e4009d82-66aa-42f3-b35f-8048e0cb8437)<img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/cefbf409-a669-416e-a215-8d2aef4f37e8" width="600">
 
 
 
