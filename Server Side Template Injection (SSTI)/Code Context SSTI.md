@@ -13,7 +13,7 @@ In both cases the testing methodology has the following steps:
 <br />
 
 - After using the expression we go back to the blog to check if the server interpretate the `{{2*2}}` or not.
-- **An error has ocurred, this error is because the function was not closed properly.**
+- **An error has ocurred, this error is because the function was not closed properly.** **Thanks to this error we can know that the templete being used is tornado.**
 ![6](https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/491e8e88-55f7-4816-96eb-1f8de916476d)
 - In this type of SSTI we must understand that we are trying to deploy our payload where a function was having place so we will need to close it. The original comment code would be something like this:
 ```html
@@ -33,6 +33,8 @@ In both cases the testing methodology has the following steps:
 - Correcting the mistake closing the function `user.name}`+ payload:
 ![7](https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/567be3ab-f56c-4815-bd55-91dc874f67f3)
 ![8](https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/adea82ab-c95a-4b2f-b8ee-ed81b846b6b3)
+
+- Finally we can check some resources as [hacktricks-SSTI](https://book.hacktricks.xyz/pentesting-web/ssti-server-side-template-injection#detection) or [tornado SSTI](https://ajinabraham.com/blog/server-side-template-injection-in-tornado), where we can obtain the next succesful payload for tornado template: `{% import os %}{{ os.popen("whoami").read() }}`.
 ![9](https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/e4009d82-66aa-42f3-b35f-8048e0cb8437)
 <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/cefbf409-a669-416e-a215-8d2aef4f37e8" width="600">
 
