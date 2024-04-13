@@ -11,7 +11,9 @@ In a Code Context SSTI we have to deploy our payload in the code.
 - Trying to put an expresion after the `user.name` function.
 <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/f44e54c3-80a7-463e-8f75-a78a66786668" width="600">
 <br />
+
 ----------------------------------------
+
 - After using the expression, we go back to the blog to check if the server interprets the `{{2*2}}` or not.
 - **An error has ocurred, this error is because the function was not properly closed.** **Thanks to this error we can know that the templete being used is tornado.**
 ![6](https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/491e8e88-55f7-4816-96eb-1f8de916476d)
@@ -29,7 +31,9 @@ In a Code Context SSTI we have to deploy our payload in the code.
 </section>
 ...
 ```
+
 -----------------------------------------------
+
 - Correcting the mistake closing the function `user.name}`+ payload:
 ![7](https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/567be3ab-f56c-4815-bd55-91dc874f67f3)
 ![8](https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/adea82ab-c95a-4b2f-b8ee-ed81b846b6b3)
