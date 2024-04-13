@@ -2,14 +2,13 @@
 ## Detection.
 In the next type of SSTI we can see that its not as easy as in a Texttype SSTI to find the vuln. The user input may also be placed within a template statement (eg. in a variable name). 
 In both cases the testing methodology has the following steps:
-- We can see that our name is being placed when we comment in the blog.
+- We can see that our name is being placed when we comment in the blog.<br />
 <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/0f5afb98-e63e-497f-a03c-8484dfd2a0f3" width="400"><br />
 - When we check our configuration we can see the name function. ***We have to insert the code here to see if the server interprete it.***
 <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/cd8f44e5-5709-4ef6-86b6-be8f76491272" width="500">
 <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/1cd0f288-375c-44f1-876b-96472abcd9e7" width="400">
 
 - Triying to put an expresion after the `user.name` function.
-
 <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/f44e54c3-80a7-463e-8f75-a78a66786668" width="600">
 <br />
 
