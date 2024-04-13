@@ -9,10 +9,10 @@ We can distinguis two Server Side Template Injections:
 
 ### 1-Plaintext Context SSTI.
 #### Detection
-First of all we have to see if we can manage the output:<br />
+- First of all we have to see if we can manage the output:<br />
 <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/ea03795b-356a-47f6-83a4-0b103c923d63" width="600"><br /><br />
 <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/7a747c61-5e2f-4e6a-a8c9-bc50993aa84e" width="600"><br />
-After that we have to check if the server evaluate the next expressions.<br />
+- After that we have to check if the server evaluate the next expressions.<br />
 ```python3
 {{7*7}}
 ${{7*7}}
