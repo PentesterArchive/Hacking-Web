@@ -31,7 +31,7 @@ Here are some payload examples that in my experience usually work, however, they
 ```
 <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/a6610bf1-9f80-454c-9099-3adee2423d49" width="580">
 
-<img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/0bbe557f-a638-43fe-ac61-b39e563d3e83" width="500">
+<img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/0bbe557f-a638-43fe-ac61-b39e563d3e83" width="450">
 
 
 
