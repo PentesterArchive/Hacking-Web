@@ -3,7 +3,7 @@
 In the next type of SSTI we can see that its not as easy as in a Texttype SSTI to find the vuln. The user input may also be placed within a template statement (eg. in a variable name). 
 In both cases the testing methodology has the following steps:
 - We can see that our name is being placed when we comment in the blog.
-<img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/0f5afb98-e63e-497f-a03c-8484dfd2a0f3" width="400">
+<img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/0f5afb98-e63e-497f-a03c-8484dfd2a0f3" width="400"><br />
 - When we check our configuration we can see the name function. ***We have to insert the code here to see if the server interprete it.***
 <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/cd8f44e5-5709-4ef6-86b6-be8f76491272" width="500">
 <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/1cd0f288-375c-44f1-876b-96472abcd9e7" width="400">
@@ -33,13 +33,8 @@ In both cases the testing methodology has the following steps:
 
 - Correcting the mistake closing the function `user.name}`+ payload:
 ![7](https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/567be3ab-f56c-4815-bd55-91dc874f67f3)
-
 ![8](https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/adea82ab-c95a-4b2f-b8ee-ed81b846b6b3)
-
-
 ![9](https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/e4009d82-66aa-42f3-b35f-8048e0cb8437)
-
-
 <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/cefbf409-a669-416e-a215-8d2aef4f37e8" width="600">
 
 
