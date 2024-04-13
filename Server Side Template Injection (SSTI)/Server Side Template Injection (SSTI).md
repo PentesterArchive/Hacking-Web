@@ -1,4 +1,4 @@
-# Server Side Template Injection (SSTI)
+# Plaintext context SSTI.
 ## Detection.
 The first task we have to do to detect a SSTI vulnerability is to check which is the template that is being used by the server. After that we have two possible ways:
 - We extract the server template so we know exactly the programming lenguaje that is being used by the server.
@@ -10,7 +10,11 @@ ${7*7}
 #{7*7} 
 <%= 7*7 %>
 ```
+### Case 1:
 <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/86a348ed-e521-412d-8e41-3a0b3877dce6" width="600"><br />
+### Case 2: 
+<img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/bde33c1d-911c-43da-ae03-ddd2b46bdce1" width="600">
+<img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/a9136b41-09cb-48fd-bc6d-40848bad3d96" width="600">
 
 After that we can check some resources as 1- [PayloadsAllTheThings-SSTI](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Server%20Side%20Template%20Injection) or 2- [Hacktricks-SSTI](https://book.hacktricks.xyz/pentesting-web/ssti-server-side-template-injection) to obtain a good payload to use in the target server.
 
