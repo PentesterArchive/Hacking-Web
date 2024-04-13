@@ -1,4 +1,4 @@
-# Plaintext context SSTI.
+# Plaintext Context SSTI.
 ## Detection.
 The first task we have to do to detect a SSTI vulnerability is to check which is the template that is being used by the server. After that we have two possible ways:
 - We extract the server template so we know exactly the programming lenguaje that is being used by the server.
