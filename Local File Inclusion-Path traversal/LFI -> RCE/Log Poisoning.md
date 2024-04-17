@@ -8,7 +8,7 @@ To detect if we are able to do a Log Poisoning we have to try to deploy any log 
 ![1](https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/e41f5f0d-94f3-40d4-8614-77c4cb7fd76c)
 - Deploying `/var/log/apache2/acces.log` taking advantage of a LFI vulnerability:
 <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/76c1609e-2a9c-4596-9efb-89b2f269749c" width="30000">
-- Any action that we do in the server will be registered there.
+- Any action that we do in the server will be registered there.<br />
 ![3](https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/ac446a20-f1f6-47cd-aa01-fa1712263226)
 
 ## Exploitation.
