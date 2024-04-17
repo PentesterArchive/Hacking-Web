@@ -9,7 +9,7 @@ To detect if we are able to do a Log Poisoning we have to try to deploy any log 
 - Deploying `/var/log/apache2/acces.log` taking advantage of a LFI vulnerability:
 <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/76c1609e-2a9c-4596-9efb-89b2f269749c" width="30000">
 - Any action that we do in the server will be registered there.<br />
-![3](https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/ac446a20-f1f6-47cd-aa01-fa1712263226)
+<img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/2b395c06-939d-43b7-9861-4dbc95ff5795" width="2500">
 
 ## Exploitation.
 We can try to modify the `User-Agent` of our requests to visualize in the logs the information we want. <br />
@@ -19,7 +19,7 @@ We can try to modify the `User-Agent` of our requests to visualize in the logs t
 ### Executing commands: 
 - If we try to inyect some code in the log the server should execute it as we can see in the following example:
 <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/832b87ff-b54d-408a-93cf-7de6c2fa5f73" width="600">
-![7](https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/026d1fb9-baa8-4acd-98e0-9b67c4abd602)
+<img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/8a83e19d-a9db-4db9-a902-09b4f662e09c" width="2500">
 
 ### Reverse shell: 
 - Using the previous method we can obtain a reverse shell.
