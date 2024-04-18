@@ -33,7 +33,8 @@ In other cases the server may have a black list that find some maches and invali
 
 ## Null byte Path Traversal.
 Sometimes the developer may concatenate an exension to the file being searched. In this case, if we attempt to obtain the `/etc/passwd` , we might actually be searching for `/etc/passwd.php`. We can avoid this technique (Only if the PHP version is outdated) by using a null byte to override the extension.<br />
->  PHP solved this type of bypass since the version 5.3.4.<br /><br />
+>  PHP solved this type of bypass since the version 5.3.4.<br />
+
 `https://insecure-website.com/loadImage?filename=../../../../../etc/passwd%00`<br />
 
 ## Extension validation.
