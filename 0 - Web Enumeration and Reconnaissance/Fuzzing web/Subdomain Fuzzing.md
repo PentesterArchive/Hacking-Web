@@ -4,6 +4,7 @@
 ![1](https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/eeb9c0a1-2552-4507-80bf-40c781e82379)
 ![2](https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/986ff74b-03bd-4031-85f5-76969fe1a66f)
 
+#### Skip TLS verification
 
 ![5](https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/6899e5ac-45dc-45b4-9da2-f0ba2621bf2b)
 
@@ -12,7 +13,7 @@
 ![7](https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/a71e50ea-c0f3-4fa2-ab6c-c2569cb3b388)
 
 
-
+-----------------------------------------------------
 
 
 ## GOBUSTER.
