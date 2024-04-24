@@ -9,6 +9,7 @@ ${{7*7}}
 ${7*7} 
 #{7*7} 
 <%= 7*7 %>
+*{7*7}
 ```
 ### Case 1:
 <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/86a348ed-e521-412d-8e41-3a0b3877dce6" width="600"><br />
