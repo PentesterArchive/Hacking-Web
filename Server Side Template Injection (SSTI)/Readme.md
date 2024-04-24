@@ -19,6 +19,7 @@ ${{7*7}}
 ${7*7}
 #{7*7}
 <%= 7*7 %>
+*{7*7}
 ```
 
 - ***Depending on the interpreted expression, the payload we'll use must be in one language or another.***
