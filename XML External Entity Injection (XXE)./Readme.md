@@ -10,15 +10,18 @@ If we fill and send the data, we can see that the parameter email is being outpu
 
 <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/5232d815-f5c9-4423-b751-2d7f422ee09a" width="800">
 
-![2](https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/5232d815-f5c9-4423-b751-2d7f422ee09a)
 
 We have to check if we can also send the outup using the next method:<br />
 ```xml
 <!DOCTYPE foo [<!ENTITY <Name> "<Value>"> ]>
 ```
-![3](https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/f557d264-8ae4-4d03-b479-8f2fcaf13f52)<br />
+
+<img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/f557d264-8ae4-4d03-b479-8f2fcaf13f52" width="800">
+
 
 If the last command was useful we can now try to report some critical files using some Wrappers.<br />
-![4](https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/eac5fa56-da99-429f-9d50-4168c56bac44)
+
+<img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/eac5fa56-da99-429f-9d50-4168c56bac44" width="800">
+
 
 ### Wrappers.
