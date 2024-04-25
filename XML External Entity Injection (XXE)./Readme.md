@@ -8,7 +8,7 @@ Sometimes we can escalate an XXE to an [SSRF - Server Side Request Forgery](http
 If we fill and send the data, we can see that the parameter email is being outputed back by the server.<br />
 <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/c60143c4-bda3-4a60-82a6-860ab2410da4" width="350">
 
-<img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/5232d815-f5c9-4423-b751-2d7f422ee09a" width="600">
+<img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/5232d815-f5c9-4423-b751-2d7f422ee09a" width="1000">
 
 ![2](https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/5232d815-f5c9-4423-b751-2d7f422ee09a)
 
