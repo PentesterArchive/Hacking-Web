@@ -23,6 +23,7 @@ If the last command was useful we can now try to report critical files using Wra
 ```xml
 <!DOCTYPE foo [<!ENTITY example SYSTEM "/etc/passwd"> ]>
 ```
+<br />
 ```xml
 <!ENTITY file SYSTEM "file:///etc/passwd">
 ```
