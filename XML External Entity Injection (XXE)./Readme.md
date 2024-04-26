@@ -51,6 +51,7 @@ Sometimes the server doesn't show the file we want to output. We can try to make
 
 <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/938762fb-89a8-4b18-94ba-8ecc5f2e57c3" width="600">
 <br />
+
 - This time the Wrapper we are using is: <br />
 
 ```xml
