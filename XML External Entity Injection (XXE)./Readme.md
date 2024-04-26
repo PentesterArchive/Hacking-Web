@@ -57,10 +57,9 @@ After checking if we get the connection we have to create the file `malicious.dt
 
 <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/d08deeba-67c9-49e3-bdd4-a29dde33e9be" width="600">
 
-![5](https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/d08deeba-67c9-49e3-bdd4-a29dde33e9be)
+<img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/01b1ee23-a7a5-4cd0-addf-f626f9e1a75b" width="700">
 
 
-![b642](https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/01b1ee23-a7a5-4cd0-addf-f626f9e1a75b)
 
 
 
