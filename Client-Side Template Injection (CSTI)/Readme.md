@@ -18,7 +18,6 @@ ${7*7}
 
 <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/af3b0e70-bec8-42e5-be78-afe976a87433" width="500">
 
-Payload obtained from [PayloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/XSS%20Injection/XSS%20in%20Angular.md).
 
 ## Exploitation.
 Once we know that CSTI is being executed, we have to know which type of template is being used, after that we must search for a payload.
@@ -28,6 +27,9 @@ Once we know that CSTI is being executed, we have to know which type of template
 <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/13375fb9-3bfa-4999-86eb-9031659c65bd" width="500">
 
 <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/ca573ff5-b4f8-4b70-9e83-96d3b61c9528" width="500">
+
+
+Payload obtained from [PayloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/XSS%20Injection/XSS%20in%20Angular.md).
 
 ### Injcting Strings to our payload.
 On some occasions, the strings we try to inject will not be reflected in the response; in this case, we will use `String.fromCharCode()` as follows.
