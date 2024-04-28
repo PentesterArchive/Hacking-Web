@@ -1,6 +1,7 @@
 # Client-Side Template Injection (CSTI).
 ## What is CSTI?
 Client-side template injection is when an attacker is able to use native template syntax to inject a malicious payload into a template, which is then executed client-side.
+> The vulnerability Client-Side Template Injection can lead to an [XSS](https://github.com/alejandro-pentest/Hacking-Web/tree/main/Cross-site%20scripting%20(XSS)) attack.
 
 ## Detection.
 We can detect a CSTI vulnerability using the same expressions as we use in a [Server Side Template Injection(SSTI)](https://github.com/alejandro-pentest/Hacking-Web/blob/main/Server-Side%20Template%20Injection%20(SSTI)/Readme.md)
@@ -26,5 +27,7 @@ Once we know that CSTI is being executed, we have to know which type of template
 <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/13375fb9-3bfa-4999-86eb-9031659c65bd" width="500">
 
 <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/ca573ff5-b4f8-4b70-9e83-96d3b61c9528" width="500">
+
+
 
 
