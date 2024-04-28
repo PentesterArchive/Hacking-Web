@@ -16,3 +16,15 @@ ${7*7}
 <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/a34977ac-863a-4ed1-975a-e764bfb6fd9e" width="500">
 
 <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/af3b0e70-bec8-42e5-be78-afe976a87433" width="500">
+
+
+## Exploitation.
+Once we know that CSTI is being executed, we have to know which type of template is being used, after that we must search for a payload.
+
+<img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/21d7cdc4-dbb3-460f-8d60-455d67205bc4" width="600">
+
+<img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/13375fb9-3bfa-4999-86eb-9031659c65bd" width="600">
+
+<img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/ca573ff5-b4f8-4b70-9e83-96d3b61c9528" width="600">
+
+
