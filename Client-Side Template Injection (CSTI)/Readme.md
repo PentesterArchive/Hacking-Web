@@ -38,9 +38,7 @@ On some occasions, the strings we try to inject will not be reflected in the res
 
 
 - After that we change our payload with the function `String.fromCharCode()` and deploy it.
-
 <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/39c2d113-015e-447f-bf1c-b8971f15f67e" width="600">
-
 <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/25e5f28f-37b6-4bc0-9d33-4d259a5a640c" width="500">
 
 
