@@ -23,8 +23,8 @@ Once we know that CSTI is being executed, we have to know which type of template
 
 <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/21d7cdc4-dbb3-460f-8d60-455d67205bc4" width="600">
 
-<img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/13375fb9-3bfa-4999-86eb-9031659c65bd" width="600">
+<img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/13375fb9-3bfa-4999-86eb-9031659c65bd" width="500">
 
-<img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/ca573ff5-b4f8-4b70-9e83-96d3b61c9528" width="600">
+<img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/ca573ff5-b4f8-4b70-9e83-96d3b61c9528" width="500">
 
 
