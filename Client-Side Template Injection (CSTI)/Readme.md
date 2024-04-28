@@ -33,7 +33,7 @@ On some occasions, the strings we try to inject will not be reflected in the res
 > Python ord() function returns the Unicode code from a given character or String.
 
 
-![7](https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/cfe9cb55-4e2e-4d5b-bd6a-fb5151d70705)
+<img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/cfe9cb55-4e2e-4d5b-bd6a-fb5151d70705" width="500">
 
 ![8](https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/ccbfdecf-efd5-4de5-8026-a50b094c760d)
 
