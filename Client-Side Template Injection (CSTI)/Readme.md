@@ -17,6 +17,7 @@ ${7*7}
 <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/a34977ac-863a-4ed1-975a-e764bfb6fd9e" width="500">
 
 <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/af3b0e70-bec8-42e5-be78-afe976a87433" width="500">
+
 Payload obtained from [PayloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/XSS%20Injection/XSS%20in%20Angular.md).
 
 ## Exploitation.
