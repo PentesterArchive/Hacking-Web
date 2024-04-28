@@ -33,7 +33,7 @@ Payload obtained from [PayloadsAllTheThings](https://github.com/swisskyrepo/Payl
 
 ### Injcting Strings to our payload.
 On some occasions, the strings we try to inject will not be reflected in the response; in this case, we will use `String.fromCharCode()` as follows.
-> Python ord() function returns the Unicode code from a given character or String.
+> Python ord() function returns the Unicode code from a given character.
 
 <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/cfe9cb55-4e2e-4d5b-bd6a-fb5151d70705" width="500">
 
