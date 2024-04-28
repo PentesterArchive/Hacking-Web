@@ -30,6 +30,18 @@ Once we know that CSTI is being executed, we have to know which type of template
 
 ### Injcting Strings to our payload.
 On some occasions, the strings we try to inject will not be reflected in the response; in this case, we will use `String.fromCharCode()` as follows.
+> Python ord() function returns the Unicode code from a given character or String.
+
+
+![7](https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/cfe9cb55-4e2e-4d5b-bd6a-fb5151d70705)
+
+![8](https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/ccbfdecf-efd5-4de5-8026-a50b094c760d)
+
+
+
+
+
+
 <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/39c2d113-015e-447f-bf1c-b8971f15f67e" width="600">
 
 <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/25e5f28f-37b6-4bc0-9d33-4d259a5a640c" width="500">
