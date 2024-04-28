@@ -28,6 +28,10 @@ Once we know that CSTI is being executed, we have to know which type of template
 
 <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/ca573ff5-b4f8-4b70-9e83-96d3b61c9528" width="500">
 
+### Injcting Strings to our payload.
+On some occasions, the strings we try to inject will not be reflected in the response; in this case, we will use `String.fromCharCode()` as follows.
+<img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/39c2d113-015e-447f-bf1c-b8971f15f67e" width="600">
 
+<img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/25e5f28f-37b6-4bc0-9d33-4d259a5a640c" width="500">
 
 
