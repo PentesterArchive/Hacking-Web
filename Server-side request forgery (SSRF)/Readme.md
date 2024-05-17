@@ -33,6 +33,7 @@ In this example, an attacker can modify the request to specify a URL local to th
 <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/734968a3-c619-4cd5-9f50-9711f315f64f" width="600">
 
 ------------
+## Internal port discovery
 
 ## SSRF against another back-end system.
 ***In some cases, the application server is able to interact with back-end systems that are not directly reachable by users***. These systems often have non-routable private IP addresses. The back-end systems are normally protected by the network topology, so they often have a weaker security posture. In many cases, internal back-end systems contain sensitive functionality that can be accessed without authentication by anyone who is able to interact with the systems.
