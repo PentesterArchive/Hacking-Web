@@ -25,8 +25,7 @@ When it comes to manual XSS discovery, the difficulty of finding the XSS vulnera
 <script>alert(window.origin)</script>
 ```
 <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/a82237cb-c6d8-4e2b-bc1d-ab4256d4a205" width="450">
-
-![4](https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/aa0a4bc8-54bc-485e-a4f5-08fafd5d21b5)
+<img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/aa0a4bc8-54bc-485e-a4f5-08fafd5d21b5" width="450">
 
 
 
