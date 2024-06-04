@@ -41,6 +41,10 @@ to input other tags like:
 ```
 **XSS BYPASSES:** [owasp - XSS_Filter_Evasion_Cheat_Sheet](https://cheatsheetseries.owasp.org/cheatsheets/XSS_Filter_Evasion_Cheat_Sheet.html)
 
+## XSS Attacks.
+XSS can lead to different types of attack depending on the XSS vulnerability type we against: 
+**Stored XSS** -> [XSS Defacing Attacks.](https://github.com/alejandro-pentest/Hacking-Web/blob/main/XSS%20Cross-Site%20Scripting/XSS%20ATTACKS/XSS%20Defacing%20Attacks.md)
+
 
 
 
