@@ -1,4 +1,4 @@
-# XSS Defacing Attacks.
+# XSS Defacing Attack.
 One of the most common attacks usually used with stored XSS vulnerabilities is website defacing attacks. Defacing a website means changing its look for anyone who visits the website.
 We can utilize injected JavaScript code (through XSS) to make a web page look any way we like.
 
