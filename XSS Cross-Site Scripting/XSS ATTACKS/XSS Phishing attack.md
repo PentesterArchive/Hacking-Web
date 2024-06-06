@@ -30,7 +30,7 @@ __Result (minified html code + XSS payload):__
 " width="350">
 
 ### Making it more realistic.
-As we saw in the last picture, we can still see the original web functionality. We must delete it to make our attack more realistic [[#Removing Elements]]. We can delete part of the code that is being shown after our injection too, to do so, we only need to add a JavaScript comment after the payload `<!--`.
+As we saw in the last picture, we can still see the original web functionality. We must delete it to make our attack more realistic [#Removing Elements]. We can delete part of the code that is being shown after our injection too, to do so, we only need to add a JavaScript comment after the payload `<!--`.
 
 #### Removing Elements
 For removing Elements we can use `document.getElementById()` function + `.remove()`.
