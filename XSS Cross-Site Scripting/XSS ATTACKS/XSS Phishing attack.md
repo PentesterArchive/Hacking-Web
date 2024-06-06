@@ -1,11 +1,10 @@
 # XSS Phishing attack.
 ## Attack Overview
-Another very common type of XSS attack is a phishing attack. Phishing attacks usually utilize legitimate-looking information to trick the victims into sending their sensitive information to the attacker. 
-A common form of XSS phishing attacks is through injecting fake login forms that send the login details to the attacker's server, which may then be used to log in on behalf of the victim and gain control 
-over their account and sensitive information.
+Another very common type of XSS attack is a phishing attack. Phishing attacks usually utilize legitimate-looking information to trick the victims into sending their sensitive information to the attacker.</br>
+A common form of XSS phishing attacks is through injecting fake login forms that send the login details to the attacker's server, which may then be used to log in on behalf of the victim and gain control over their account and sensitive information.
 Once we identify a working XSS payload, we can proceed to the phishing attack. To perform an XSS phishing attack, we must inject an HTML code that displays a login form on the targeted page. 
-This form should send the login information to a server we are listening on, such that once a user attempts to log in, we'd get their credentials.
-__This time our target is:__
+This form should send the login information to a server we are listening on, such that once a user attempts to log in, we'd get their credentials.<br />
+__This time our target is:__<br />
 <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/afc0a1f6-4b50-4f66-bb5a-db7207a3ad04" width="350">
 __After injecting our payload:__
 <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/8e956fb4-ee2a-4678-a574-bfd36b76e41f" width="350">
@@ -35,7 +34,7 @@ shown after our injection too, to do so we only need to add a javascript comment
 #### Removing Elements
 For removing Elements we can use `document.getElementById()` function + `.remove()`.
 - Obtaining the id of the element we want to remove:
-<img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/c9e4c784-205a-4c97-8d66-641d5622e3b6" width="700">
+<img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/c9e4c784-205a-4c97-8d66-641d5622e3b6" width="700"><br />
 - Ading to our payload:
 </br>
 ```html
