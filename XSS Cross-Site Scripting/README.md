@@ -59,8 +59,8 @@ The following are the most common methods used by attackers in their malicious c
 
 ## XSS Attacks.
 XSS can lead to different types of attack depending on the XSS vulnerability type we against:<br/> 
-**Stored XSS** -> [XSS Defacing Attack.](https://github.com/alejandro-pentest/Hacking-Web/blob/main/XSS%20Cross-Site%20Scripting/XSS%20ATTACKS/XSS%20Defacing%20Attacks.md)<br />
-[XSS Phishing Attack.](https://github.com/alejandro-pentest/Hacking-Web/blob/main/XSS%20Cross-Site%20Scripting/XSS%20ATTACKS/XSS%20Phishing%20attack.md)
+- **Stored XSS** -> [XSS Defacing Attack.](https://github.com/alejandro-pentest/Hacking-Web/blob/main/XSS%20Cross-Site%20Scripting/XSS%20ATTACKS/XSS%20Defacing%20Attacks.md)<br />
+- [XSS Phishing Attack.](https://github.com/alejandro-pentest/Hacking-Web/blob/main/XSS%20Cross-Site%20Scripting/XSS%20ATTACKS/XSS%20Phishing%20attack.md)
 
 
 
