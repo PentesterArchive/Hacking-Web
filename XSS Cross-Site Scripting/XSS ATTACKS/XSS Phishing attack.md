@@ -1,7 +1,7 @@
 # XSS Phishing attack.
 ## Attack Overview
 Another very common type of XSS attack is a phishing attack. Phishing attacks usually utilize legitimate-looking information to trick the victims into sending their sensitive information to the attacker.</br>
-A common form of XSS phishing attack is through injecting fake login forms that send the login details to the attacker's server, which may then be used to log in on behalf of the victim and gain control over their account and sensitive information.
+A common form of XSS phishing attack is through _injecting fake login forms that send the login details to the attacker's server_, which may then be used to log in on behalf of the victim and gain control over their account and sensitive information.
 Once we identify a working XSS payload, we can proceed to the phishing attack. To perform an XSS phishing attack, we must inject an HTML code that displays a login form on the targeted page. 
 This form should send the login information to a server we are listening on, such that once a user attempts to log in, we'd get their credentials.<br />
 __This time our target is:__<br />
@@ -30,7 +30,7 @@ __Result (minified html code + XSS payload):__
 " width="350">
 
 ### Making it more realistic.
-As we saw in the last picture, we can still see the original web functionality. We must delete it to make our attack more realistic [#Removing Elements]. We can delete part of the code that is being shown after our injection too, to do so, we only need to add a JavaScript comment after the payload `<!--`.
+As we saw in the last picture, we can still see the original web functionality. We must delete it to make our attack more realistic. We can delete part of the code that is being shown after our injection too, to do so, we only need to add a JavaScript comment after the payload `<!--`.
 
 #### Removing Elements
 For removing Elements we can use `document.getElementById()` function + `.remove()`.
