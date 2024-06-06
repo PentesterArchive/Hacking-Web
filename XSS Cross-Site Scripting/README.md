@@ -47,8 +47,13 @@ The following are the most common methods used by attackers in their malicious c
 > ```html<script>,<SCRIPT>,<sCrIpT>```
 3. Modern web browsers usually ignore extra whitespace characters:
 > ```html<script   >, <script[\x09]>, <script[\x13]>....``` We can also attempt to insert a null byte anywhere in the string, for example, ```html<scr[\x00]ipt>```.
+4. Using atipical web handlers, we can find a lot of them on [W3School.](https://www.w3schools.com/jsref/dom_obj_event.asp).
+
+
 <br />
-**We can find more filter evasioons in [Invicti XSS Filter Evasion.](https://www.invicti.com/learn/xss-filter-evasion/)**
+
+
+**We can find more filter evasioons in** [Invicti XSS Filter Evasion.](https://www.invicti.com/learn/xss-filter-evasion/)
 
 **XSS BYPASSES CHEAT SHEET ->** [owasp - XSS_Filter_Evasion_Cheat_Sheet](https://cheatsheetseries.owasp.org/cheatsheets/XSS_Filter_Evasion_Cheat_Sheet.html)
 
