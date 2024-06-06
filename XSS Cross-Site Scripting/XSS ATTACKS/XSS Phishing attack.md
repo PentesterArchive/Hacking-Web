@@ -5,8 +5,8 @@ A common form of XSS phishing attacks is through injecting fake login forms that
 Once we identify a working XSS payload, we can proceed to the phishing attack. To perform an XSS phishing attack, we must inject an HTML code that displays a login form on the targeted page. 
 This form should send the login information to a server we are listening on, such that once a user attempts to log in, we'd get their credentials.<br />
 __This time our target is:__<br />
-<img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/afc0a1f6-4b50-4f66-bb5a-db7207a3ad04" width="350">
-__After injecting our payload:__
+<img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/afc0a1f6-4b50-4f66-bb5a-db7207a3ad04" width="350"><br />
+__After injecting our payload:__<br />
 <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/8e956fb4-ee2a-4678-a574-bfd36b76e41f" width="350">
 
 ## Login Form Injection
