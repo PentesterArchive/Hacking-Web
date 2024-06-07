@@ -1,7 +1,7 @@
 # mysql command line tool.
 # Index
 - [mysql command line tool.](#mysql-command-line-tool.)
-- [Kali MariaDB Installation and Setup.](#kali-mariadb-installation-and-setup.)
+- [Kali MariaDB Installation and Setup.](##kali-mariadb-installation-and-setup.)
 # mysql command line tool.
 The mysql utility is used to authenticate to and interact with a MySQL/MariaDB database. The `-u` flag is used to supply the username and the `-p` flag for the password. 
 > The -p flag should be passed empty, so we are prompted to enter the password and do not pass it directly on the command line since it could be stored in cleartext in the bash_history file.
