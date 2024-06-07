@@ -82,4 +82,6 @@ mysql> SELECT * FROM logins WHERE username like '___';
 
 
 
+<img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/dcb2992e-63bf-4a46-9867-38a1e60cd5d3" width="450">
+
 
