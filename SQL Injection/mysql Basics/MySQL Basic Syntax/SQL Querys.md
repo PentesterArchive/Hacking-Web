@@ -71,7 +71,9 @@ Another useful SQL clause is **LIKE**, enabling *selecting records by matching a
 ```sql
 SELECT * FROM logins WHERE username LIKE 'admin%';
 ```
-<img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/f4a40a30-85cd-400f-bca5-e01c5455a915" width="450">
+<img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/f4a40a30-85cd-400f-bca5-e01c5455a915" width="450"><br />
+<img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/dcb2992e-63bf-4a46-9867-38a1e60cd5d3" width="550">
+
 
 - The **%** symbol acts as a wildcard and *matches all characters after admin*. It is used to match zero or more characters. 
 - The **_** symbol *is used to match exactly one character*.
@@ -82,6 +84,5 @@ mysql> SELECT * FROM logins WHERE username like '___';
 
 
 
-<img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/dcb2992e-63bf-4a46-9867-38a1e60cd5d3" width="450">
 
 
