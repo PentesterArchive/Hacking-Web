@@ -6,5 +6,9 @@ First, the attacker has to inject code outside the expected user input limits, s
 to escape the limits of user input and inject data directly into the SQL query.
 Once an attacker can inject, they have to look for a way to execute a different SQL query. This can be done using SQL code to make up a working query that executes both the intended and the new SQL queries. There are many ways to achieve this, like using stacked queries or using Union queries. Finally, to retrieve our new query's output, we have to interpret it or capture it on the web application's front end.
 There are so many things that we can do when we find an SQL Injection, such as bypass an autentication or even retrieve database information.
-- [mysql command line tool](https://github.com/alejandro-pentest/Hacking-Web/tree/main/SQL%20Injection/mysql%20Basics)
-  - [mysql Basic Syntax](https://github.com/alejandro-pentest/Hacking-Web/tree/main/SQL%20Injection/mysql%20Basics/MySQL%20Basic%20Syntax)
+
+## SQL Code.
+It's essential to know SQL code to perform effective SQL injection exploitation. If you want to learn more about SQL or need a reference, you can find the following files in my Fundamentals GitHub repository, where I cover the following content:
+- [mysql command line tool](https://github.com/alejandro-pentest/Fundamentals/tree/main/SQL%20Basics)
+  - [SQL Basic Syntax](https://github.com/alejandro-pentest/Fundamentals/blob/main/SQL%20Basics/SQL%20Basic%20Syntax/Readme.md)
+    - [SQL Query](https://github.com/alejandro-pentest/Fundamentals/blob/main/SQL%20Basics/SQL%20Basic%20Syntax/SQL%20Querys.md)
