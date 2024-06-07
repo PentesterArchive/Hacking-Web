@@ -1,10 +1,16 @@
 # mysql command line tool.
+-----------------------
+---------------------
 # Index
 - [mysql command line Basic use.](#mysql-command-line-basic-use)
   - [Connection.](#connection)
   - [Check user Privileges.](#check-user-privileges)
   - [Navigating the database.](#navigating-the-database)
 - [Kali MariaDB Installation and Setup.](#kali-mariadb-installation-and-setup)
+
+------------------------
+------------------------
+
 ## mysql command line Basic use.
 ### Connection.
 The mysql utility is used to authenticate to and interact with a MySQL/MariaDB database. The `-u` flag is used to supply the username and the `-p` flag for the password. 
