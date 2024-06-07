@@ -33,6 +33,10 @@ mysql > CREATE TABLE logins (
   ->    PRIMARY KEY (id)
   ->    );
 ```
+__Same command in one line:__
+```sql
+CREATE TABLE logins (id INT NOT NULL AUTO_INCREMENT, username VARCHAR(100) UNIQUE NOT NULL, password VARCHAR(100) NOT NULL, date_of_joining DATETIME DEFAULT NOW(), PRIMARY KEY (id));
+```
 <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/c9a8962d-586c-4e84-8d95-355a0fcd8496" width="400">
 <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/b1e4ebc0-fc5e-43be-9539-e0378a0a2300" width="300">
 
