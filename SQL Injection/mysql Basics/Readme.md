@@ -20,10 +20,9 @@ The default MySQL/MariaDB port is (3306), but it can be configured to another po
 `-p` **->** Password.<br />
 `-h` **->** Host. <br />
 `-P` **->** Port.<br />
-<img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/9286e439-9d67-4de1-bae9-196331f6b5d2" width="700">
-### Check user Privileges.
-When we do not specify a host, it will default connect to the localhost server.
-
+<img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/9286e439-9d67-4de1-bae9-196331f6b5d2" width="700"><br />
+### Check user Privileges.<br />
+When we do not specify a host, it will default connect to the localhost server.<br />
 We can view which privileges we have using the `SHOW GRANTS` command. (in this case we have full privs cause we are logged as root).
 
 ![2](https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/774fa9c3-649a-45dd-a1cd-7dd4f6787a76)<br />
@@ -43,17 +42,15 @@ We can view which privileges we have using the `SHOW GRANTS` command. (in this c
 ----------------------
 
 ## Kali MariaDB Installation and Setup.
-It's possible that we find out that we can connect to remote DB, but we cannot connect to our own database. That's probably because we have the mysql-client ready to use, but we have not installed or 
-set up mysql-server. If this is our case we can see the next alert ```ERROR 2002 (HY000): Can't connect to local server through socket '/run/mysqld/mysqld.sock' (2)```.
+It's possible that we find out that we can connect to remote DB, but we cannot connect to our own database. That's probably because we have mysql-client ready to use, but we have not installed or 
+set up mysql-server. If this is our case we can maybe see the next alert ```ERROR 2002 (HY000): Can't connect to local server through socket '/run/mysqld/mysqld.sock' (2)```.<br />
 Next, we will see how to install, set up, and connect to our own local database in Kali Linux OS.
-
-
 
 
 ```mysql
 apt-get -y install mariadb-server
 ```
-![10](https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/b73e5513-9f3a-402e-81fd-df89d2fd302f)
+![9](https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/f4165577-7578-45fe-afd4-9402e13f2e62)
 
 
 ```bash
