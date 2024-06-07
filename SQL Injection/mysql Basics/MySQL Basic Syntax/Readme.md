@@ -4,7 +4,7 @@
 
 ```sql
 mysql> CREATE DATABASE shop;
-Query OK, 0 rows affected (0.03 sec)
+Query OK, 1 row affected (0,000 sec)
 ```
 
 ## Creating Tables.
