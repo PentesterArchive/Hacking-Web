@@ -1,8 +1,12 @@
 # mysql command line tool.
 # Index
-- [mysql command line tool.](#mysql-command-line-tool)
+- [mysql command line Basic use.](#mysql-command-line-basic-use)
+  - [Connection.](#connection)
+  - [Check user Privileges.](#check-user-privileges)
+  - [Navigating the database.](#navigating-the-database)
 - [Kali MariaDB Installation and Setup.](#kali-mariadb-installation-and-setup)
-## mysql command line Basi use.
+## mysql command line Basic use.
+### Connection.
 The mysql utility is used to authenticate to and interact with a MySQL/MariaDB database. The `-u` flag is used to supply the username and the `-p` flag for the password. 
 > The -p flag should be passed empty, so we are prompted to enter the password and do not pass it directly on the command line since it could be stored in cleartext in the bash_history file.
 The default MySQL/MariaDB port is (3306), but it can be configured to another port. It is specified using an uppercase `P`, unlike the lowercase `p` used for passwords.<br />
@@ -11,13 +15,14 @@ The default MySQL/MariaDB port is (3306), but it can be configured to another po
 `-h` **->** Host. <br />
 `-P` **->** Port.<br />
 <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/9286e439-9d67-4de1-bae9-196331f6b5d2" width="700">
-
+### Check user Privileges.
 When we do not specify a host, it will default connect to the localhost server.
 
 We can view which privileges we have using the `SHOW GRANTS` command. (in this case we have full privs cause we are logged as root).
 
 ![2](https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/774fa9c3-649a-45dd-a1cd-7dd4f6787a76)<br />
 
+### Navigating the database.
 <br />`SHOW DATABASES` **->** Will display all the databases that this db is containing.<br />
 ![3](https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/689df40f-11dd-4bd6-91a7-eca2ae8a3124)<br />
 <br /> After seen which databases does this database contains, we can select or "use" one of them `use <DBName>;`.<br />
