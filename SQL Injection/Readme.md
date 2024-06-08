@@ -1,6 +1,3 @@
-- __terutaous__
-
-
 # SQL Injection (SQLI).
 A SQL injection occurs when an *attacker attempts to pass input that changes the final SQL query sent by the web application to the database, enabling the user to perform other **unintended SQL queries** directly against the database*.<br />
 There are many ways to accomplish this. To get a SQL injection to work, the attacker must first *inject SQL code and then subvert the web application logic by changing the original query or executing a completely new one*.<br />
@@ -16,10 +13,14 @@ It's essential to know SQL code to perform effective SQL injection exploitation.
     - [SQL Query](https://github.com/alejandro-pentest/Fundamentals/blob/main/SQL%20Basics/SQL%20Basic%20Syntax/SQL%20Querys.md)
 
 ## SQL Injection Types:
+<br />
+<br />
+
 <p align="center">
   <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/b43c55cb-839c-4755-8002-ec348bea0e62" width="800" alt="Sublime's custom image"/>
 </p>
 <br />
+
 ### In-band SQLi.
 The attacker uses the same channel of communication to launch their attacks and to gather their results. In-band SQLi’s simplicity and efficiency make it one of the most common types of SQLi attack. There are two sub-variations of this method:<br />
 
