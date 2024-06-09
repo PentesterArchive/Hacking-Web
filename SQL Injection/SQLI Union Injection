@@ -1,0 +1,14 @@
+# SQLI Union Injection.
+As allways the first step must be to find a vulnerable fild, we can do it by injecting some symbols like `'` and seeing if we are getting an error.
+
+
+
+
+
+The first step we must follow is knowing how many columns does the database have. We can do it using two different methods:
+```sql
+' ORDER BY 2 -- -
+```
+
+
+
