@@ -1,4 +1,12 @@
 # SQLI Authentication Bypass.
+## Index.
+1. [SQLI Discovery.](#sqli-discovery)
+2. [OR Injection.](#or-injection)
+   - [Operator Precedence.](#operator-precedence)
+   - [Injection knowing the username.](#injection-knowing-the-username)
+   - [Injection without knowing the username.](#injection-without-knowing-the-username)
+4. [Authentication Bypass.](#authentication-bypass)
+
 ## SQLi Discovery
 Before we start subverting the web application's logic and attempting to bypass the authentication, we _first have to test whether the login form is vulnerable to SQL injection_. To do that, we will try to __add one of the below payloads after our username and see if it causes any errors or changes how the page behaves__:
 | Payload |	URL Encoded |
@@ -45,7 +53,7 @@ OR, ||
 = (assignment), :=
 ```
 
-
+### Injection knowing the username.
 An example of a condition that will always return true is `'1'='1'`. However, to keep the SQL query working and keep an even number of quotes, instead of using ('1'='1'), we will remove the last quote and use `'1'='1`, so the remaining single quote from the original query would be in its place.<br />
 So, if we inject the below condition and have an OR operator between it and the original condition, _if we know the username_ it should always return true:
 
@@ -64,7 +72,7 @@ So, if we inject the below condition and have an OR operator between it and the 
 
 <br />
 
-### Injecting without knowing the username.
+### Injection without knowing the username.
 It's posibble that we don't know any username, that's not a problem cause we can make a true query even if we don't know any username or password.
 
 To successfully log in once again, we will need an overall true query. This can be achieved by injecting an OR condition into the password field too, so it will always return true. Let us try `something' or '1'='1` as the password.
@@ -73,7 +81,7 @@ SELECT * FROM logins WHERE username='' OR '1'='1' AND password = '' OR '1'='1';
 ```
 
 
-The additional OR condition resulted in a true query overall, as the WHERE clause returns everything in the table, and the user present in the first row is logged in. In this case, as both conditions will return true, we do not have to provide a test username and password and can directly start with the `'` injection and log in with just `' or '1' = '1`.
+>The additional OR condition resulted in a _true query overall_, as the __WHERE clause returns everything in the table, and the user present in the first row is logged in__. In this case, as both conditions will return `TRUE`, we do not have to provide a test username and password and can directly start with the `'` injection and log in with just `' or '1' = '1`.
 
 
 <p align="center">
