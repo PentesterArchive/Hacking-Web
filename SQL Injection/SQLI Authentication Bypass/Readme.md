@@ -91,5 +91,28 @@ SELECT * FROM logins WHERE username='' OR '1'='1' AND password = '' OR '1'='1';
 ## Authentication Bypass
 The payload we have been using is just one of many options, we can see more of them in [PayloadsAllTheThings - Authentication Bypass](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/SQL%20Injection#authentication-bypass).
 
+### Using comments.
+The SQLI authentication we have been bypassing in the previous examples was an easy query, sometimes we can face more difficult querys that may break the sense of our injection, like:
+```sql
+SELECT * FROM logins WHERE (username='' AND id > 1) AND password = '3590cb8af0bbb9e78c343b52b93773c9';
+```
+> We see that the query is preventing us to login as the admin because of the condicion `id > 1`. Additionally, we also see that the password was hashed before being used in the query, even if the password field is empty the server assigns a default hash for it (`d41d8cd98f00b204e9800998ecf8427e`). This will prevent us from injecting through the password field because the input is changed to a hash.
+
+The way to bypass it is using SQL comments, using them we can ignore a certain part of the query. We can use `-- -` and `#`, in addition to an in-line comment `/**/` (though this is not usually used in SQL injections).
+> If you are inputting your payload in the URL within a browser, a (#) symbol is usually considered as a tag, and will not be passed as part of the URL. In order to use (#) as a comment within a browser, we can use '%23', which is an URL encoded (#) symbol.
+
+Let us go back to our previous example and inject `'admin'-- -` as our username. The final query will be:
+
+```sql
+SELECT * FROM logins WHERE (username='admin' -- -
+```
+As we can see the query is still wrong because we neet to close the brackets. But, if we close the query properly using `' OR '1' = '1') -- -`, we will bypass the authentication process.
+```sql
+SELECT * FROM logins WHERE (username=' OR '1' = '1') -- -
+```
+![6](https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/5c45d0b8-c951-457b-aa60-e2e11e46111d)
+
+
+
 
 
