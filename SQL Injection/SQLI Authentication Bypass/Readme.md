@@ -1,4 +1,4 @@
-# SQLI Authentication Bypass.
+# SQL Injection Authentication Bypass.
 ## Index.
 1. [SQLI Discovery.](#sqli-discovery)
 2. [OR Injection.](#or-injection)
