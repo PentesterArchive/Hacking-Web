@@ -1,1 +1,87 @@
-SQLI Authentication Bypass.
+# SQLI Authentication Bypass.
+## SQLi Discovery
+Before we start subverting the web application's logic and attempting to bypass the authentication, we _first have to test whether the login form is vulnerable to SQL injection_. To do that, we will try to __add one of the below payloads after our username and see if it causes any errors or changes how the page behaves__:
+| Payload |	URL Encoded |
+| ------- | ----------- |
+|    '    | 	  %27     |
+|    "    |   	%22     |
+|    #   	|     %23     |
+|    ;    | 	  %3B     |
+|    ) 	  |     %29     |
+
+>In some cases, we may have to use the URL encoded version of the payload. An example of this is when we put our payload directly in the URL 'i.e. HTTP GET request'.
+
+So, let us start by injecting a single quote:
+![2](https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/a8314106-8cd4-41c9-8e26-cdf8c9a4b53b)
+We see that a __SQL error was thrown__ instead of the Login Failed message. The page threw an error because the resulting query was:
+```sql
+SELECT * FROM logins WHERE username=''' AND password = 'something';
+```
+The quote we entered resulted in an odd number of quotes, causing a syntax error. 
+
+## OR Injection
+We would need the query __always to return true, regardless of the username and password entered, to bypass the authentication__. To do this, we can _abuse the `OR` operator in our SQL injection_.
+The MySQL documentation for operation precedence states that the `AND` _operator would be evaluated before the_ `OR` _operator_.
+
+### Operator Precedence
+[Operator Precedences](https://movefeng.com/mysql-manual/operator-precedence.html) are shown in the following list, from highest precedence to the lowest. Operators that are shown together on a line have the same precedence.
+```sql 
+INTERVAL
+BINARY, COLLATE
+!
+- (unary minus), ~ (unary bit inversion)
+^
+*, /, DIV, %, MOD
+-, +
+<<, >>
+&
+|
+= (comparison), <=>, >=, >, <=, <, <>, !=, IS, LIKE, REGEXP, IN
+BETWEEN, CASE, WHEN, THEN, ELSE
+NOT
+AND, &&
+XOR
+OR, ||
+= (assignment), :=
+```
+
+
+An example of a condition that will always return true is `'1'='1'`. However, to keep the SQL query working and keep an even number of quotes, instead of using ('1'='1'), we will remove the last quote and use `'1'='1`, so the remaining single quote from the original query would be in its place.<br />
+So, if we inject the below condition and have an OR operator between it and the original condition, _if we know the username_ it should always return true:
+
+<p align="center">
+  <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/30f186b9-3dcc-41e2-bb01-5018080b3cfb" width="600" alt="Sublime's custom image"/>
+</p>
+
+<br />
+
+> The `AND` operator will be evaluated first, and it will return false. Then, the `OR` operator would be evalutated, and if either of the statements is true, it would return `TRUE`. Since `1=1` always returns true, __this query will return true, and it will grant us access__.
+
+
+<p align="center">
+  <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/7bb93940-ea45-410c-be02-08850331b832" width="700" alt="Sublime's custom image"/>
+</p>
+
+<br />
+
+### Injecting without knowing the username.
+It's posibble that we don't know any username, that's not a problem cause we can make a true query even if we don't know any username or password.
+
+To successfully log in once again, we will need an overall true query. This can be achieved by injecting an OR condition into the password field too, so it will always return true. Let us try `something' or '1'='1` as the password.
+```sql
+SELECT * FROM logins WHERE username='' OR '1'='1' AND password = '' OR '1'='1';
+```
+
+
+The additional OR condition resulted in a true query overall, as the WHERE clause returns everything in the table, and the user present in the first row is logged in. In this case, as both conditions will return true, we do not have to provide a test username and password and can directly start with the `'` injection and log in with just `' or '1' = '1`.
+
+
+<p align="center">
+  <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/3071a421-2cbc-43f5-8bb9-aafb5d700e62" width="700" alt="Sublime's custom image"/>
+</p>
+
+## Authentication Bypass
+The payload we have been using is just one of many options, we can see more of them in [PayloadsAllTheThings - Authentication Bypass](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/SQL%20Injection#authentication-bypass).
+
+
+
