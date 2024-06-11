@@ -24,8 +24,8 @@ To be able to write files to the back-end server using a MySQL database, we requ
 3. Write access to the location we want to write to on the back-end server
 
 
-We have already found that our current user has the FILE privilege necessary to write files ([SQLI User Enumeration](https://github.com/alejandro-pentest/Hacking-Web/blob/main/SQL%20Injection/SQLI%20Database%20Enumeration/3-%20SQLI%20User%20Enumeration.%20INFORMATION_SCHEMA.user.md)). We must now check if the MySQL database has that privilege. This can be done by checking the 
-`secure_file_priv` global variable.
+> We have already found that our current user has the `FILE` privilege __necessary to write files__ ([SQLI User Enumeration](https://github.com/alejandro-pentest/Hacking-Web/blob/main/SQL%20Injection/SQLI%20Database%20Enumeration/3-%20SQLI%20User%20Enumeration.%20INFORMATION_SCHEMA.user.md)).
+> We must now check if the MySQL database has that privilege. This can be done by checking the `secure_file_priv` global variable.
 
 ### secure_file_priv
 The secure_file_priv variable is __used to determine where to read/write files from__. An empty value lets us read files from the entire file system. Otherwise, if a certain directory is set, 
