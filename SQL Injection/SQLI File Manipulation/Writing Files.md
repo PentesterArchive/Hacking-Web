@@ -1,15 +1,21 @@
 # SQLI FILE MANIPULATION; Writing Files.
 ## Index
-1. [Writing Files.](#writing-files)
-   - [Write Files Privileges.](#write-files-privileges)
-     - [secure_file_priv](#secure_file_priv)
+1. [Attack overview.](#attack-overview)
+2. [Write Files Privileges.](#write-files-privileges)
+   - [secure_file_priv](#secure_file_priv)
+3. [Writing Files.](#writing-files)
    - [SELECT INTO OUTFILE](#select-into-outfile)
    - [Writing Files through SQL Injection.](#writing-files-through-sql-injection)
-2. [Writing a Web Shell](#writing-a-web-shell)
-## Writing Files.
+   - [Writing a Web Shell](#writing-a-web-shell)
+
+---------------------------
+
+## Attack overview.
 When it comes to writing files to the back-end server, it becomes much more restricted in modern DBMSes, since we can utilize this to write a web shell on the remote server, hence getting 
 code execution and taking over the server. This is why modern DBMSes disable file-write by default and require certain privileges for DBA's to write files. 
-<br />Before writing files, we must first check if we have sufficient rights and if the DBMS allows writing files.
+<br />Before writing files, we must first check if we have sufficient rights and if the DBMS allows writing files ([Write Files Privileges](#write-files-privileges)). To do so we will use [secure_file_priv](#secure_file_priv).<br />
+Once we know we have the necessary privileges we can start writing files using [SELECT INTO OUTFILE](#select-into-outfile), [Writing Files through SQL Injection.](#writing-files-through-sql-injection), and finally obtaining a web shell ([Writing a Web Shell](#writing-a-web-shell)).
+
 
 ## Write Files Privileges
 To be able to write files to the back-end server using a MySQL database, we require three things:
@@ -52,8 +58,8 @@ X' UNION SELECT 1, variable_name, variable_value, 4 FROM information_schema.glob
 > And the result shows that the __`secure_file_priv` value is empty__, meaning that we can read/write files to any location.
 
 -------------
-
-## SELECT INTO OUTFILE
+## Writing Files.
+### SELECT INTO OUTFILE
 Now that we have confirmed that our user should write files to the back-end server, let's try to do that using the `SELECT .. INTO OUTFILE` statement. <br />
 > The `SELECT INTO OUTFILE` statement can be used to __write data from select queries into files__. This is usually used for exporting data from tables.
 
@@ -89,7 +95,7 @@ As we can see above, the `test.txt` file was created successfully and is owned b
 > Tip: Advanced file exports utilize the `FROM_BASE64("base64_data")` function in order to be able to write long/advanced files, including binary data.
 
 
-## Writing Files through SQL Injection
+### Writing Files through SQL Injection
 Let's try writing a text file to the webroot and verify if we have write permissions. The below query should write file written successfully to the `/var/www/html/proof.txt` file, which we can then access on the web application:
 ```sql
 select 'file written successfully!' into outfile '/var/www/html/proof.txt'
@@ -115,7 +121,7 @@ We don’t see any errors on the page, which indicates that the query succeeded.
 
 
 
-## Writing a Web Shell
+### Writing a Web Shell
 
 Having confirmed write permissions, we can go ahead and write a PHP web shell to the webroot folder. We can write the following PHP webshell to be able to execute commands directly on the back-end server:
 ```php
