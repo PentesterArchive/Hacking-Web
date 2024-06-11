@@ -2,7 +2,7 @@
 OS Command Injection is a vulnerability that allows us to execute System Commands on a target via Web Application. 
 
 ## How does it work?
-In some cases the target server requires to manage some functionalities executing scripts and there we can maybe have a chance to execute our commands.<br />
+In some cases the target server requires to manage some functionalities executing system commands, there we can maybe have a chance to execute our own commands in the back-end server.<br />
 The idea is that the target can execute for example `checkstock.sh` to check the stock, the web has to send some parameters like the `product id`. We can try to exploit those parameters.
 If we go to or own system we can try to execute a script and see what happen if we execute it using some operators with another command behind:<br />
 <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/1772183b-e495-4312-8b64-38a49f4e19b7" width="300">
@@ -46,6 +46,7 @@ We can brute Force to get the working parameter faster.
 `ls`
 $(ls)
 ```
+
 
 <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/a6286450-746e-4fb0-9291-8739fc0fea07" width="600">
 
