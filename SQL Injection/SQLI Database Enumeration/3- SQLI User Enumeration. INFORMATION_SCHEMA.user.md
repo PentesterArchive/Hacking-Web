@@ -1,8 +1,6 @@
 # User Privs
 ### DB User
-First, we have to _determine which user we are within the database_. While we do not necessarily need database administrator (DBA) privileges to read data, this is becoming more required in modern 
-DBMSes, as only DBA are given such privileges. The same applies to other common databases. If we do have DBA privileges, then it is much more probable that we have file-read privileges. If we do not,
-then we have to check our privileges to see what we can do. To be able to find our current DB user, we can use any of the following queries:
+First, we have to _determine which user we are within the database_. After that, we have to check our privileges to see what we can do. To be able to find our current DB user, we can use any of the following queries:
 ```sql
 SELECT USER()
 SELECT CURRENT_USER()
