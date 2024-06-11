@@ -28,9 +28,11 @@ To be able to write files to the back-end server using a MySQL database, we requ
 > We must now check if the MySQL database has that privilege. This can be done by checking the `secure_file_priv` global variable.
 
 ### secure_file_priv
-The secure_file_priv variable is __used to determine where to read/write files from__. An empty value lets us read files from the entire file system. Otherwise, if a certain directory is set, 
-we can only read from the folder specified by the variable. On the other hand, NULL means we cannot read/write from any directory.<br /> 
-MariaDB has this variable set to empty by default, which lets us read/write to any file if the user has the FILE privilege. However, MySQL uses `/var/lib/mysql-files` as the default folder. 
+The secure_file_priv variable is __used to determine where to read/write files from__. 
+- An empty value lets us __read files from the entire file system__.
+- If a certain directory is set, we can only __read from the folder specified by the variable__.
+- `NULL` means we __cannot read/write from any directory__.<br /> 
+MariaDB has this variable set to empty by default, which lets us read/write to any file if the user has the `FILE` privilege. However, MySQL uses `/var/lib/mysql-files` as the default folder. 
 This means that reading files through a MySQL injection isn't possible with default settings. Even worse, some modern configurations default to NULL, 
 meaning that we cannot read/write files anywhere within the system.
 
