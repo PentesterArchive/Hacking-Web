@@ -4,7 +4,7 @@
    - [Write Files Privileges.](#write-files-privileges)
      - [secure_file_priv](#secure_file_priv)
    - [SELECT INTO OUTFILE](#select-into-outfile)
-   - [Writing Files through SQL Injection.](#writing_files_through_sql_injection)
+   - [Writing Files through SQL Injection.](#writing-files-through-sql-injection)
 2. [Writing a Web Shell](#writing-a-web-shell)
 ## Writing Files.
 When it comes to writing files to the back-end server, it becomes much more restricted in modern DBMSes, since we can utilize this to write a web shell on the remote server, hence getting 
