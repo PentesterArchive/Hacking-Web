@@ -33,6 +33,67 @@ There are also some Windows-only characters we can insert in the middle of comma
 
 ![12](https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/d9e37a2c-e611-4383-8811-0f885a4ba46e)
 
+## Case Manipulation
+One command obfuscation technique we can use is case manipulation, like inverting the character cases of a command (e.g. WHOAMI) or alternating between cases (e.g. WhOaMi). This usually works because a command blacklist may not check for different case variations of a single word.<br />
+If we are dealing with a Windows server, we can change the casing of the characters of the command and send it. In Windows, commands for PowerShell and CMD are case-insensitive, meaning they will execute the command regardless of what case it is written in:
+
+![5](https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/38e1c0b4-e5de-4b29-8060-fa055dcbd10e)
 
 
 
+
+
+## Reversed Commands
+First, we'd have to get the reversed string of our command in our terminal, as follows:<br />
+`echo 'whoami' | rev`<br />
+
+We see that even though the command does not contain the actual whoami word, it does work the same and provides the expected output.<br />
+`"whoami"[-1..-20] -join ''`<br />
+
+![6](https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/7f8f3a11-b00c-46f6-a841-8210bbaf6758)
+
+We can now use the below command to execute a reversed string with a PowerShell sub-shell (iex "$()"), as follows:<br />
+```bash
+iex "$('imaohw'[-1..-20] -join '')"
+```
+
+![7](https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/e340d79b-a974-4fd5-95ae-44ea04bf3758)
+
+
+
+
+----------------------
+## Encoded commands.
+This new technique is helpful for commands containing filtered characters or characters that may be URL-decoded by the server. This may allow for the command to get messed up by the time it reaches the shell and eventually fails to execute. Instead of copying an existing command online, we will try to create our own unique obfuscation command this time. This way, it is much less likely to be denied by a filter or a WAF. The command we create will be unique to each case, depending on what characters are allowed and the level of security on the server.<br />
+We can utilize various encoding tools, like base64 or xxd (for hex encoding).
+
+### Base64
+First, we need to base64 encode our string, as follows: <br />
+```powershell
+[Convert]::ToBase64String([System.Text.Encoding]::Unicode.GetBytes('whoami'))
+```
+> __RESULT:__ `dwBoAG8AYQBtAGkA`
+
+
+
+![8](https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/ba336585-ce0d-4bf6-8eba-657c7e741bab)
+
+
+
+We may also achieve the same thing on Linux, but we would have to convert the string from utf-8 to utf-16 before we base64 it, as follows:
+```bash
+echo -n whoami | iconv -f utf-8 -t utf-16le | base64
+``` 
+> __RESULT:__ `dwBoAG8AYQBtAGkA`
+
+Finally, we can decode the `b64` string and execute it with a PowerShell sub-shell (`iex "$()"`), as follows:
+```powershell
+iex "$([System.Text.Encoding]::Unicode.GetString([System.Convert]::FromBase64String('dwBoAG8AYQBtAGkA')))"
+```
+![9](https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/38a9f3d4-d99f-40db-b53a-4b396d95b36a)
+
+
+
+As we can see, we can get creative with Bash or PowerShell and create new bypassing and obfuscation methods that have not been used before, and hence are very likely to bypass filters and WAFs. Several tools can help us automatically obfuscate our commands.
+
+> In addition to the techniques we discussed, we can utilize numerous other methods, like wildcards, regex, output redirection, integer expansion, and many others. We can find some such techniques on PayloadsAllTheThings.
