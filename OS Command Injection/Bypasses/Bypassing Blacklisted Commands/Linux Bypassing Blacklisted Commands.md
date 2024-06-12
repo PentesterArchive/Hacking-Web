@@ -31,8 +31,11 @@ The easiest to use are quotes, and __they work on both Linux and Windows servers
 # Linux Only
 We can insert a few other Linux-only characters in the middle of commands, and the bash shell would ignore them and execute the command. These characters include the backslash `\` and the positional parameter character `$@`. This works exactly as it did with the quotes, but in this case, the number of characters do not have to be even, and we can insert just one of them if we want to:
 `who$@ami` `w\ho\am\i`
-> If any of those characters are in the blaclist we can try to bypass it using the skills explained in [Command Injection - Character Bypass](https://github.com/alejandro-pentest/Hacking-Web/blob/main/OS%20Command%20Injection/Bypasses/Bypassing%20Blacklisted%20characters.md)
+> If any of those characters are in the blacklist we can try to bypass it using the skills explained in [Command Injection - Character Bypass](https://github.com/alejandro-pentest/Hacking-Web/blob/main/OS%20Command%20Injection/Bypasses/Bypassing%20Blacklisted%20characters.md). The next is an example of combining both techniques:
 
+<img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/2731f1c1-fe8d-41ac-9f4d-fe8c844da4fa" width="500">
+
+<img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/74d1a5ea-8bf3-4bd6-99cb-b2fa2838b868" width="400">
 
 
 
