@@ -46,7 +46,16 @@ We can brute Force to get the working parameter faster.
 `ls`
 $(ls)
 ```
-
+```bash
+; 
+\n
+&
+|
+&&
+||
+``
+$()
+```
 
 <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/a6286450-746e-4fb0-9291-8739fc0fea07" width="600">
 
