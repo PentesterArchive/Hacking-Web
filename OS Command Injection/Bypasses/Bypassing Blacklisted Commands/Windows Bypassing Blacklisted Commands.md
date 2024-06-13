@@ -97,3 +97,61 @@ iex "$([System.Text.Encoding]::Unicode.GetString([System.Convert]::FromBase64Str
 As we can see, we can get creative with Bash or PowerShell and create new bypassing and obfuscation methods that have not been used before, and hence are very likely to bypass filters and WAFs. Several tools can help us automatically obfuscate our commands.
 
 > In addition to the techniques we discussed, we can utilize numerous other methods, like wildcards, regex, output redirection, integer expansion, and many others. We can find some such techniques on PayloadsAllTheThings.
+
+
+
+
+-------------------------------
+--------------------------------
+
+# Automated obfuscation Windows tools.
+## Windows (DOSfuscation).
+If we are dealing with advanced security tools, we may not be able to use basic, manual obfuscation techniques. In such cases, it may be best to resort to automated obfuscation tools.
+
+### DOSfuscation.
+DOSfuscation is an interactive tool, as we run it once and interact with it to get the desired obfuscated command. We have to clone the tool from GitHub and then invoke it through PowerShell, as follows:
+```powershell
+PS C:\htb> git clone https://github.com/danielbohannon/Invoke-DOSfuscation.git
+PS C:\htb> cd Invoke-DOSfuscation
+PS C:\htb> Import-Module .\Invoke-DOSfuscation.psd1
+PS C:\htb> Invoke-DOSfuscation
+Invoke-DOSfuscation> help
+
+HELP MENU :: Available options shown below:
+[*]  Tutorial of how to use this tool             TUTORIAL
+...SNIP...
+
+Choose one of the below options:
+[*] BINARY      Obfuscated binary syntax for cmd.exe & powershell.exe
+[*] ENCODING    Environment variable encoding
+[*] PAYLOAD     Obfuscated payload via DOSfuscation
+```
+We can even use tutorial to see an example of how the tool works. Once we are set, we can start using the tool, as follows:
+```powershell
+Invoke-DOSfuscation> SET COMMAND type C:\Users\htb-student\Desktop\flag.txt
+Invoke-DOSfuscation> encoding
+Invoke-DOSfuscation\Encoding> 1
+
+...SNIP...
+Result:
+typ%TEMP:~-3,-2% %CommonProgramFiles:~17,-11%:\Users\h%TMP:~-13,-12%b-stu%SystemRoot:~-4,-3%ent%TMP:~-19,-18%%ALLUSERSPROFILE:~-4,-3%esktop\flag.%TMP:~-13,-12%xt
+```
+Finally, we can try running the obfuscated command on CMD, and we see that it indeed works as expected:
+```powershell
+C:\htb> typ%TEMP:~-3,-2% %CommonProgramFiles:~17,-11%:\Users\h%TMP:~-13,-12%b-stu%SystemRoot:~-4,-3%ent%TMP:~-19,-18%%ALLUSERSPROFILE:~-4,-3%esktop\flag.%TMP:~-13,-12%xt
+
+test_flag
+```
+
+Tip: If we do not have access to a Windows VM, we can run the above code on a Linux VM through `pwsh`. Run `pwsh`, and then follow the exact same command from above. You can find the installation instructions at [Install PowerShell on Linux.](https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-linux?view=powershell-7.4).
+
+
+
+
+
+
+
+
+
+
+
