@@ -33,6 +33,8 @@ The space character can be taken using the `${IFS}` path.
 
 ![2](https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/8691cd74-de16-4c58-8253-e10df07acd84)
 
+> __Sometimes we can use `TAB` - > `%09` to bypass space.__
+
 
 ### ;
 
