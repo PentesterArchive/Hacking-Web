@@ -52,7 +52,30 @@ I'm trying to bypass it with `.pht.jpg`, as `.pht` was avaliable too.<br />
 >__NOTE: Sometimes, even if the file has been successfully uploaded, we might not be able to execute it. In that case, we should try using other possible extensions.__
 
 <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/054867de-92d2-4258-8b87-37827bd0dee4" width="600">
-
-
-
 <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/ea328b5a-c0b7-41e9-ae55-e7dabda0499a" width="700">
+
+
+--------------------------------------------------------------------------------------
+
+## Character Injection
+We can inject several characters before or after the final extension to cause the web application to misinterpret the filename and execute the uploaded file as a PHP script.
+
+The following are some of the characters we may try injecting:
+```php
+    %20
+    %0a
+    %00
+    %0d0a
+    /
+    .\
+    .
+    …
+    :
+```
+Each character has a specific use case that may trick the web application to misinterpret the file extension. For example, (shell.php%00.jpg) works with PHP servers with version 5.X or earlier, as it causes the PHP web server to end the file name after the (%00), and store it as (shell.php), while still passing the whitelist. The same may be used with web applications hosted on a Windows server by injecting a colon (:) before the allowed file extension (e.g. shell.aspx:.jpg), which should also write the file as (shell.aspx). Similarly, each of the other characters has a use case that may allow us to upload a PHP script while bypassing the type validation test.<br />
+> We can use [extensionCreator.sh](https://github.com/alejandro-pentest/Hacking-Web/blob/main/File%20Upload%20Attacks/Extensions%20lists/fUploadsInjection.sh) to create filenames using those characters and test if we can upload them.
+
+
+
+
+
