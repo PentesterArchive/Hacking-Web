@@ -37,25 +37,63 @@ cat content-type.txt | grep 'image/' > image-content-types.txt
 ```
 
 
-
-
-
-
-
 This time we get File successfully uploaded, and if we visit our file, we see that it was successfully uploaded: 
 
 
 
 
+> Note: A file upload HTTP request has two Content-Type headers, one for the attached file (at the bottom), and one for the full request (at the top). We usually need to modify the file's Content-Type
+header, but in some cases the request will only contain the main Content-Type header (e.g. if the uploaded content was sent as POST data), in which case we will need to modify the main Content-Type header.
 
 
 
 
 
 
+## MIME-Type
 
-Exercise: Try to run the above scan to find what Content-Types are allowed.
+The second and more common type of file content validation is testing the uploaded file's MIME-Type. Multipurpose Internet Mail Extensions (MIME) is an internet standard that determines the type of a file through its general format and bytes structure.
 
-For the sake of simplicity, let's just pick an image type (e.g. image/jpg), then intercept our upload request and change the Content-Type header to it: 
+This is usually done by inspecting the first few bytes of the file's content, which contain the File Signature or Magic Bytes. For example, if a file starts with (GIF87a or GIF89a), this indicates that it is a GIF image, while a file starting with plaintext is usually considered a Text file. If we change the first bytes of any file to the GIF magic bytes, its MIME type would be changed to a GIF image, regardless of its remaining content or extension.
+
+Tip: Many other image types have non-printable bytes for their file signatures, while a GIF image starts with ASCII printable bytes (as shown above), so it is the easiest to imitate. Furthermore, as the string GIF8 is common between both GIF signatures, it is usually enough to imitate a GIF image.
+
+Let's take a basic example to demonstrate this. The file command on Unix systems finds the file type through the MIME type. If we create a basic file with text in it, it would be considered as a text file, as follows:
+Type Filters
+
+alejandroPentester@htb[/htb]$ echo "this is a text file" > text.jpg 
+alejandroPentester@htb[/htb]$ file text.jpg 
+text.jpg: ASCII text
+
+As we see, the file's MIME type is ASCII text, even though its extension is .jpg. However, if we write GIF8 to the beginning of the file, it will be considered as a GIF image instead, even though its extension is still .jpg:
+Type Filters
+
+alejandroPentester@htb[/htb]$ echo "GIF8" > text.jpg 
+alejandroPentester@htb[/htb]$file text.jpg
+text.jpg: GIF image data
+
+Web servers can also utilize this standard to determine file types, which is usually more accurate than testing the file extension. The following example shows how a PHP web application can test the MIME type of an uploaded file:
+Code: php
+
+$type = mime_content_type($_FILES['uploadFile']['tmp_name']);
+
+if (!in_array($type, array('image/jpg', 'image/jpeg', 'image/png', 'image/gif'))) {
+    echo "Only images are allowed";
+    die();
+}
+
+As we can see, the MIME types are similar to the ones found in the Content-Type headers, but their source is different, as PHP uses the mime_content_type() function to get a file's MIME type. Let's try to repeat our last attack, but now with an exercise that tests both the Content-Type header and the MIME type:
 
 
+Once we forward our request, we notice that we get the error message Only images are allowed. Now, let's try to add GIF8 before our PHP code to try to imitate a GIF image while keeping our file extension as .php, so it would execute PHP code regardless:
+
+
+
+We can now visit our uploaded file, and we will see that we can successfully execute system commands: 
+
+
+
+
+
+
+Note: We see that the command output starts with GIF8 , as this was the first line in our PHP script to imitate the GIF magic bytes, and is now outputted as a plaintext before our PHP code is executed.
