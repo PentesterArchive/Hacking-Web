@@ -1,4 +1,17 @@
 # Bypasses.
+-------------
+## Index
+1. [Blacklist.](#blacklist)<br />
+2. [Whitelist.](#whitelist)<br />
+    - [Double Extensions.](#double-extensions)<br />
+    - [Reverse Double Extension](#reverse-double-extensions)
+    - [Reverse Double Extension Attack. Example.](#reverse-double-extension-attack)
+    - [Triple Extension.](#triple-extension)
+3. [Character Injection.](#character-injection)
+   
+
+---------------
+
 ## Blacklist.
 Sometimes we may deal with a blacklist that doesn't let us upload .php files. There are many different extensions that we can use to execute PHP files. So, the attack to bypass the blacklist consists of using brute force to find which extensions are permitted. If our target executes .php, we can try to brute force the following extension list [php - extensions list](https://github.com/alejandro-pentest/Hacking-Web/blob/main/File%20Upload%20Attacks/Extensions%20lists/php.txt).
 
@@ -61,6 +74,19 @@ I'm trying to bypass it with `.pht.jpg`, as `.pht` was avaliable too.<br />
 
 
 --------------------------------------------------------------------------------------
+### Triple Extension.
+> Sometimes we maybe need to insert another extension to bypass the filter.
+>We can use the following tool in this type of ocassions [GaboLC98/File-upload-vulnerability-abuse](https://github.com/GaboLC98/File-upload-vulnerability-abuse)
+
+
+<img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/362a91e8-6f92-4a72-b1e5-7603d4e23f69" width="600">
+
+
+
+
+
+-----------------------------------------------
+
 
 ## Character Injection
 We can inject several characters before or after the final extension to cause the web application to misinterpret the filename and execute the uploaded file as a PHP script.
