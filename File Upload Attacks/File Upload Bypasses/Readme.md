@@ -78,12 +78,7 @@ I'm trying to bypass it with `.pht.jpg`, as `.pht` was avaliable too.<br />
 > Sometimes we maybe need to insert another extension to bypass the filter.
 >We can use the following tool in this type of ocassions [GaboLC98/File-upload-vulnerability-abuse](https://github.com/GaboLC98/File-upload-vulnerability-abuse)
 
-
 <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/362a91e8-6f92-4a72-b1e5-7603d4e23f69" width="600">
-
-
-
-
 
 -----------------------------------------------
 
