@@ -1,6 +1,10 @@
 # Bypasses.
 ## Blacklist.
-Sometimes we may deal with a Blacklist that don't let us to upload .php files. There are a lot of different extensions that we can use to execute php files. So the attack to bypass the blacklist consists in using bruteforce to find wich extensions are permitted. If our target executes .php we can try to brute force the next extension list [php - extensions list](https://github.com/alejandro-pentest/Hacking-Web/blob/main/File%20Upload%20Attacks/Extensions%20lists/php.txt).
+Sometimes we may deal with a blacklist that doesn't let us upload .php files. There are many different extensions that we can use to execute PHP files. So, the attack to bypass the blacklist consists of using brute force to find which extensions are permitted. If our target executes .php, we can try to brute force the following extension list [php - extensions list](https://github.com/alejandro-pentest/Hacking-Web/blob/main/File%20Upload%20Attacks/Extensions%20lists/php.txt).
+
+
+
+
 
 ----------------------------
 
@@ -23,15 +27,16 @@ This pattern should _only consider the __final file extension___, as it uses `^.
 In such cases, we can try to upload a file that contains the above extensions and add them PHP code execution, even if it does not end with the PHP extension. For example, the file name `shell.php.jpg` should pass the earlier whitelist test as it ends with `.jpg`, and it would be able to execute PHP code due to a misconfiguration, as it contains `.php` in its name.
 
 #### Reverse Double Extension Attack.
-The first step to execute this attack is to brute force checking which extensions are permitted by the server, in other words we have to __check which extensions are whitelisted__. 
-
+The first step to execute this attack is to brute force checking which extensions are permitted by the server, in other words we have to __check which extensions are whitelisted__. <br />
+To do so we can use [Seclists - raft-large-extensions.txt](https://github.com/danielmiessler/SecLists/blob/master/Discovery/Web-Content/raft-large-extensions.txt). But if we know which type of files can
+be uploaded, for example images, we can find a shorter list containing: png, jpg, jpeg, gif...
 
 <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/723a0263-2808-4792-9e6d-6a0d297ed818" width="1000">
 
 > RESULT: `.jpg` files can be succesful uploaded to the server.<br />
 
-Now we have to check __wich php extension type__ (in case that the target is using php) __are not blacklisted__.
-
+Now we have to check __wich php extension type__ (in case that the target is using php) __are not blacklisted__.<br />
+We can use [PHP extensions list](https://github.com/alejandro-pentest/Hacking-Web/blob/main/File%20Upload%20Attacks/Extensions%20lists/php.txt).
 <img src="https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/390d20e6-a0c8-47c5-973a-2e9fd725ebd5" width="900">
 
 > RESULT: `.php` files are not allowed.
