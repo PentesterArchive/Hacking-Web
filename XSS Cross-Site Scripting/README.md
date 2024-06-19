@@ -20,6 +20,8 @@ We can use several automated tools to detect XSS vulnerabilities, pe: [xsser](ht
 
 ### Manual detection.
 When it comes to manual XSS discovery, the difficulty of finding the XSS vulnerability depends on the level of security of the web application. Basic XSS vulnerabilities can usually be found through testing various XSS payloads, but identifying advanced XSS vulnerabilities requires advanced code review skills. </br>
+Payload list: [Payloadbox.](https://github.com/payloadbox/xss-payload-list)
+
 #### XSS Basic vulnerability
 ```javascript
 <script>alert(window.origin)</script>
@@ -59,8 +61,10 @@ The following are the most common methods used by attackers in their malicious c
 
 ## XSS Attacks.
 XSS can lead to different types of attack depending on the XSS vulnerability type we against:<br/> 
+- **XSS Redirect** -> `<script>window.location.replace("https://google.com");</script>`.
 - **Stored XSS** -> [XSS Defacing Attack.](https://github.com/alejandro-pentest/Hacking-Web/blob/main/XSS%20Cross-Site%20Scripting/XSS%20ATTACKS/XSS%20Defacing%20Attacks.md)<br />
 - [XSS Phishing Attack.](https://github.com/alejandro-pentest/Hacking-Web/blob/main/XSS%20Cross-Site%20Scripting/XSS%20ATTACKS/XSS%20Phishing%20attack.md)
+- **XSS Session Hijacking.**
 
 
 
