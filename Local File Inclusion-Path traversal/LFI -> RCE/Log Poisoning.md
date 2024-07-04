@@ -26,5 +26,11 @@ We can attempt to modify the `User-Agent` of our requests to visualize in the lo
 
 
 
+### Log files List.
+#### Apache:
 
+#### smtp
+If smtp server is up we can check the next files: 
+1. `/var/mail/<user>`
+2. `/var/log/mail.log`
 
