@@ -7,7 +7,7 @@ Hydra is a popular open-source password cracking tool that can be used to perfor
 
 -----------------------
   
-### What do we need to perform an Hydra Authentication Bypass?
+### What do we need to perform this type of Hydra Brute Force Attack?
 #### Inspector.
 We can obtain all the information to deploy the attack in the inspector: 
 1. User & Password Files. 
