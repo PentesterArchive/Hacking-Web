@@ -4,6 +4,8 @@ Hydra is a popular open-source password cracking tool that can be used to perfor
 <p align="center">
   <img src="https://github.com/user-attachments/assets/51401d1e-48df-4dc2-a807-a33dfb52212a" width="500">
 </p>
+
+-----------------------
   
 ### What do we need to perform an Hydra Authentication Bypass?
 #### Inspector.
