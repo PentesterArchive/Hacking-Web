@@ -3,7 +3,7 @@ Shellshock is a security vulnerability in the Bash shell, discovered in 2014, th
 It exploits the way Bash handles environment variables and functions. By injecting malicious code into these variables, an attacker can gain control of the system, 
 execute commands, or bypass security restrictions, making it a serious risk for servers and devices running vulnerable versions of Bash.
 
-> The following examples can be reproduced in the next lab: [Pentesterlab](https://pentesterlab.com/exercises/cve-2014-6271)
+> The following examples can be reproduced in the next lab: [Pentesterlab CVE-2014-6271/Shellshock](https://pentesterlab.com/exercises/cve-2014-6271)
 
 ## Detection.
 Shellshock can be exploited regularly in `.sh` or `.cgi` files, we can add those extensions to search them in our fuzzing.
