@@ -2,6 +2,7 @@
 Sometimes we guess that a parameter such as `file`, `filename`, `cmd` or something similar could be hidden. In this case, we can fuzz the parameter.
 
 - Parameters list:![5](https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/c59d8f6d-bded-4d83-9f7a-79631e82f4a8)
+- [Parameters list 2](https://raw.githubusercontent.com/whiteknight7/wordlist/refs/heads/main/fuzz-lfi-params-list.txt)
 
 ## FFUF.
 ![1](https://github.com/alejandro-pentest/Hacking-Web/assets/161533623/cde6e5f3-539f-4fea-82c8-3567eeef1656)<br />
