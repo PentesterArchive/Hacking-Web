@@ -20,3 +20,4 @@ We can perform the same action using Burpsuite. Regardless of the method, if the
 
 ### Open Redirect Sanitization.
 There are several ways to sanitize an Open Redirect and the following are some of the possible bypasses we can use: 
+[Open Redirect Bypasses](https://github.com/PentesterArchive/Hacking-Web/blob/main/Open%20Redirect/Open%20Redirect%20Bypasses.md).
